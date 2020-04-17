@@ -1,0 +1,41 @@
+.img-button {
+  height: 35px;
+  width: 35px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.option-dropdown {
+  height: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.label-input {
+  height: 35px;
+  padding: 2px;
+  border: 1px solid #d9d9d9;
+}
+
+.text-mode {
+  display: flex;
+  height: 35px;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.text-mode p {
+  margin: auto;
+  text-align: center;
+}

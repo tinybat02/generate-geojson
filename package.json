@@ -1,0 +1,26 @@
+{
+  "name": "generate-polygon",
+  "version": "1.0.0",
+  "description": "Openlayers Utilities",
+  "scripts": {
+    "build": "grafana-toolkit plugin:build",
+    "test": "grafana-toolkit plugin:test",
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch"
+  },
+  "author": "Nam Le",
+  "license": "MIT",
+  "devDependencies": {
+    "@grafana/data": "next",
+    "@grafana/toolkit": "next",
+    "@grafana/ui": "next",
+    "@types/nanoid": "^2.1.0",
+    "@types/ol": "^6.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "nanoid": "^3.0.2",
+    "ol": "^6.3.1",
+    "react-inlinesvg": "^1.2.0"
+  }
+}

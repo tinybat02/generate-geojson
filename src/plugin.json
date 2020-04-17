@@ -1,0 +1,21 @@
+{
+  "type": "panel",
+  "name": "Map Ultilities",
+  "id": "id-openlayers-generate-polygon",
+  "dataFormats": ["table"],
+  "info": {
+    "description": "Openlayers Utilities",
+    "author": {
+      "name": "Nam Le"
+    },
+    "keywords": ["openlayers", "world map"],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "6.3.x",
+    "plugins": []
+  }
+}
