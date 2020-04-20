@@ -6,7 +6,7 @@ import { Draw, Modify, Snap } from 'ol/interaction';
 import GeometryType from 'ol/geom/GeometryType';
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 import { XYZ, Vector as VectorSource } from 'ol/source';
-import { Fill, Stroke, Style, Circle as CircleStyle } from 'ol/style';
+import { Fill, Stroke, Style, Circle as CircleStyle, Text } from 'ol/style';
 import GeoJSON from 'ol/format/GeoJSON';
 import { fromLonLat } from 'ol/proj';
 import { defaults, DragPan, MouseWheelZoom, Select } from 'ol/interaction';
@@ -20,8 +20,10 @@ import Undo from './img/undo.svg';
 import SVG from 'react-inlinesvg';
 import Done from './img/done.svg';
 import Delete from './img/delete.svg';
+// import Stepper from './stepper/Stepper';
 import 'ol/ol.css';
 import './styles/main.css';
+import { FeatureLike } from 'ol/Feature';
 
 interface Props extends PanelProps<MapOptions> {}
 interface State {
@@ -30,7 +32,10 @@ interface State {
   selectedFeature: Feature | null;
   propKey: string;
   propValue: string;
+  currentStep: number;
 }
+
+// const stepsArray = ['Placing AP & POI', 'Creating Label', 'Send to Server'];
 
 export class MainPanel extends PureComponent<Props, State> {
   id: string;
@@ -53,6 +58,7 @@ export class MainPanel extends PureComponent<Props, State> {
       selectedFeature: null,
       propKey: '',
       propValue: '',
+      currentStep: 1,
     };
   }
 
@@ -70,7 +76,36 @@ export class MainPanel extends PureComponent<Props, State> {
     const source = new VectorSource();
     this.drawLayer = new VectorLayer({
       source: source,
-      style: new Style({
+      style: function(feature: FeatureLike) {
+        const propKeyFromFeature = Object.keys(feature.getProperties()).find((el: string) => el !== 'geometry');
+        const textLabel = propKeyFromFeature ? `${propKeyFromFeature} ${feature.get(propKeyFromFeature)}` : undefined;
+        const offsetY = feature.getGeometry().getType() === 'Point' ? -10 : 0;
+        return new Style({
+          fill: new Fill({
+            color: 'rgba(255, 255, 255, 0.2)',
+          }),
+          stroke: new Stroke({
+            color: '#ffcc33',
+            width: 2,
+          }),
+          image: new CircleStyle({
+            radius: 7,
+            fill: new Fill({
+              color: '#ffcc33',
+            }),
+          }),
+          text: new Text({
+            stroke: new Stroke({
+              color: '#fff',
+              width: 2,
+            }),
+            font: '14px Calibri,sans-serif',
+            text: textLabel,
+            offsetY: offsetY,
+          }),
+        });
+      },
+      /* new Style({
         fill: new Fill({
           color: 'rgba(255, 255, 255, 0.2)',
         }),
@@ -84,8 +119,7 @@ export class MainPanel extends PureComponent<Props, State> {
             color: '#ffcc33',
           }),
         }),
-      }),
-      zIndex: 2,
+      }), */ zIndex: 2,
     });
 
     this.map = new Map({
@@ -296,6 +330,33 @@ export class MainPanel extends PureComponent<Props, State> {
       } else {
         selectedFeature.set(propKey, propValue);
       }
+
+      selectedFeature.setStyle(
+        new Style({
+          fill: new Fill({
+            color: 'rgba(255, 255, 255, 0.2)',
+          }),
+          stroke: new Stroke({
+            color: '#ffcc33',
+            width: 2,
+          }),
+          image: new CircleStyle({
+            radius: 7,
+            fill: new Fill({
+              color: '#ffcc33',
+            }),
+          }),
+          text: new Text({
+            stroke: new Stroke({
+              color: '#fff',
+              width: 2,
+            }),
+            font: '14px Calibri,sans-serif',
+            text: `${propKey} ${propValue}`,
+            offsetY: -10,
+          }),
+        })
+      );
     }
 
     // selectedFeature && selectedFeature.set('label', propKey);
@@ -335,7 +396,7 @@ export class MainPanel extends PureComponent<Props, State> {
 
   render() {
     const { width, height } = this.props;
-    const { drawOption, editMode, propKey, propValue, selectedFeature } = this.state;
+    const { drawOption, editMode, propKey, propValue, selectedFeature /* , currentStep */ } = this.state;
 
     return (
       <div
@@ -406,7 +467,15 @@ export class MainPanel extends PureComponent<Props, State> {
             width,
             height: height - 40,
           }}
-        ></div>
+          // className="grid-area-wrapper"
+        >
+          {/* <div id={this.id} className="inner-area"></div>
+          <div style={{ display: 'flex' }}>
+            <div className="stepper-container-vertical ">
+              <Stepper direction="vertical" currentStepNumber={currentStep - 1} steps={stepsArray} stepColor="#ee5253" />
+            </div>
+          </div> */}
+        </div>
       </div>
     );
   }

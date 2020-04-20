@@ -1928,7 +1928,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".img-button {\n  height: 35px;\n  width: 35px;\n  border: 1px solid #d9d9d9;\n  border-radius: 2px;\n  padding: 2px;\n  cursor: pointer; }\n\n.flex-row {\n  display: flex;\n  flex-direction: row; }\n\n.space-between {\n  justify-content: space-between; }\n\n.option-dropdown {\n  height: 35px;\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.label-input {\n  height: 35px;\n  padding: 2px;\n  border: 1px solid #d9d9d9; }\n\n.text-mode {\n  display: flex;\n  height: 35px;\n  padding: 2px;\n  margin-right: 10px; }\n\n.text-mode p {\n  margin: auto;\n  text-align: center; }\n", "",{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,YAAY;EACZ,eAAe,EAAE;;AAEnB;EACE,aAAa;EACb,mBAAmB,EAAE;;AAEvB;EACE,8BAA8B,EAAE;;AAElC;EACE,YAAY;EACZ,iBAAiB;EACjB,oBAAoB,EAAE;;AAExB;EACE,YAAY;EACZ,YAAY;EACZ,yBAAyB,EAAE;;AAE7B;EACE,aAAa;EACb,YAAY;EACZ,YAAY;EACZ,kBAAkB,EAAE;;AAEtB;EACE,YAAY;EACZ,kBAAkB,EAAE","file":"main.css","sourcesContent":[".img-button {\n  height: 35px;\n  width: 35px;\n  border: 1px solid #d9d9d9;\n  border-radius: 2px;\n  padding: 2px;\n  cursor: pointer; }\n\n.flex-row {\n  display: flex;\n  flex-direction: row; }\n\n.space-between {\n  justify-content: space-between; }\n\n.option-dropdown {\n  height: 35px;\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.label-input {\n  height: 35px;\n  padding: 2px;\n  border: 1px solid #d9d9d9; }\n\n.text-mode {\n  display: flex;\n  height: 35px;\n  padding: 2px;\n  margin-right: 10px; }\n\n.text-mode p {\n  margin: auto;\n  text-align: center; }\n"]}]);
+exports.push([module.i, ".img-button {\n  height: 35px;\n  width: 35px;\n  border: 1px solid #d9d9d9;\n  border-radius: 2px;\n  padding: 2px;\n  cursor: pointer; }\n\n.img-button:active {\n  background-color: #e5e5e5;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(3px); }\n\n.flex-row {\n  display: flex;\n  flex-direction: row; }\n\n.space-between {\n  justify-content: space-between; }\n\n.option-dropdown {\n  height: 35px;\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.label-input {\n  height: 35px;\n  padding: 2px;\n  border: 1px solid #d9d9d9; }\n\n.text-mode {\n  display: flex;\n  height: 35px;\n  padding: 2px;\n  margin-right: 10px; }\n\n.text-mode p {\n  margin: auto;\n  text-align: center; }\n\n.grid-area-wrapper {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 3fr 1fr;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center; }\n\n.buttons-container button {\n  margin: 0 2rem;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n", "",{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,YAAY;EACZ,eAAe,EAAE;;AAEnB;EACE,yBAAyB;EACzB,yBAAyB;EACzB,0BAA0B,EAAE;;AAE9B;EACE,aAAa;EACb,mBAAmB,EAAE;;AAEvB;EACE,8BAA8B,EAAE;;AAElC;EACE,YAAY;EACZ,iBAAiB;EACjB,oBAAoB,EAAE;;AAExB;EACE,YAAY;EACZ,YAAY;EACZ,yBAAyB,EAAE;;AAE7B;EACE,aAAa;EACb,YAAY;EACZ,YAAY;EACZ,kBAAkB,EAAE;;AAEtB;EACE,YAAY;EACZ,kBAAkB,EAAE;;AAEtB;EACE,iBAAa;EAAb,aAAa;EACb,yBAA8B;EAA9B,8BAA8B,EAAE;;AAElC;EACE,sBAAsB,EAAE;;AAE1B;EACE,6BAA6B;EAC7B,yBAAyB;EACzB,kBAAkB;EAClB,iBAAiB;EACjB,aAAa;EACb,UAAU,EAAE;;AAEd;EACE,sBAAsB;EACtB,+BAA+B;EAC/B,kBAAkB;EAClB,yBAAyB;EACzB,SAAS;EACT,aAAa;EACb,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,WAAW,EAAE;;AAEf;EACE,kBAAkB,EAAE;;AAEtB;EACE,cAAc;EACd,YAAY;EACZ,YAAY;EACZ,6BAA6B;EAC7B,YAAY,EAAE","file":"main.css","sourcesContent":[".img-button {\n  height: 35px;\n  width: 35px;\n  border: 1px solid #d9d9d9;\n  border-radius: 2px;\n  padding: 2px;\n  cursor: pointer; }\n\n.img-button:active {\n  background-color: #e5e5e5;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(3px); }\n\n.flex-row {\n  display: flex;\n  flex-direction: row; }\n\n.space-between {\n  justify-content: space-between; }\n\n.option-dropdown {\n  height: 35px;\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.label-input {\n  height: 35px;\n  padding: 2px;\n  border: 1px solid #d9d9d9; }\n\n.text-mode {\n  display: flex;\n  height: 35px;\n  padding: 2px;\n  margin-right: 10px; }\n\n.text-mode p {\n  margin: auto;\n  text-align: center; }\n\n.grid-area-wrapper {\n  display: grid;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center; }\n\n.buttons-container button {\n  margin: 0 2rem;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -64729,9 +64729,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // import Stepper from './stepper/Stepper';
 
 
-
+ // const stepsArray = ['Placing AP & POI', 'Creating Label', 'Send to Server'];
 
 var MainPanel =
 /** @class */
@@ -64822,6 +64823,31 @@ function (_super) {
         } else {
           selectedFeature.set(propKey, propValue);
         }
+
+        selectedFeature.setStyle(new ol_style__WEBPACK_IMPORTED_MODULE_6__["Style"]({
+          fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
+            color: 'rgba(255, 255, 255, 0.2)'
+          }),
+          stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
+            color: '#ffcc33',
+            width: 2
+          }),
+          image: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Circle"]({
+            radius: 7,
+            fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
+              color: '#ffcc33'
+            })
+          }),
+          text: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Text"]({
+            stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
+              color: '#fff',
+              width: 2
+            }),
+            font: '14px Calibri,sans-serif',
+            text: propKey + " " + propValue,
+            offsetY: -10
+          })
+        }));
       } // selectedFeature && selectedFeature.set('label', propKey);
 
     };
@@ -64878,7 +64904,8 @@ function (_super) {
       editMode: false,
       selectedFeature: null,
       propKey: '',
-      propValue: ''
+      propValue: '',
+      currentStep: 1
     };
     return _this;
   }
@@ -64902,21 +64929,53 @@ function (_super) {
     var source = new ol_source__WEBPACK_IMPORTED_MODULE_5__["Vector"]();
     this.drawLayer = new ol_layer__WEBPACK_IMPORTED_MODULE_4__["Vector"]({
       source: source,
-      style: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Style"]({
-        fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
-          color: 'rgba(255, 255, 255, 0.2)'
-        }),
-        stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
-          color: '#ffcc33',
-          width: 2
-        }),
-        image: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Circle"]({
-          radius: 7,
+      style: function style(feature) {
+        var propKeyFromFeature = Object.keys(feature.getProperties()).find(function (el) {
+          return el !== 'geometry';
+        });
+        var textLabel = propKeyFromFeature ? propKeyFromFeature + " " + feature.get(propKeyFromFeature) : undefined;
+        var offsetY = feature.getGeometry().getType() === 'Point' ? -10 : 0;
+        return new ol_style__WEBPACK_IMPORTED_MODULE_6__["Style"]({
           fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
-            color: '#ffcc33'
+            color: 'rgba(255, 255, 255, 0.2)'
+          }),
+          stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
+            color: '#ffcc33',
+            width: 2
+          }),
+          image: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Circle"]({
+            radius: 7,
+            fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
+              color: '#ffcc33'
+            })
+          }),
+          text: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Text"]({
+            stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
+              color: '#fff',
+              width: 2
+            }),
+            font: '14px Calibri,sans-serif',
+            text: textLabel,
+            offsetY: offsetY
           })
-        })
-      }),
+        });
+      },
+
+      /* new Style({
+        fill: new Fill({
+          color: 'rgba(255, 255, 255, 0.2)',
+        }),
+        stroke: new Stroke({
+          color: '#ffcc33',
+          width: 2,
+        }),
+        image: new CircleStyle({
+          radius: 7,
+          fill: new Fill({
+            color: '#ffcc33',
+          }),
+        }),
+      }), */
       zIndex: 2
     });
     this.map = new ol__WEBPACK_IMPORTED_MODULE_2__["Map"]({
@@ -65100,7 +65159,9 @@ function (_super) {
         editMode = _b.editMode,
         propKey = _b.propKey,
         propValue = _b.propValue,
-        selectedFeature = _b.selectedFeature;
+        selectedFeature = _b.selectedFeature
+    /* , currentStep */
+    ;
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       style: {
         width: width,
