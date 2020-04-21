@@ -6,24 +6,18 @@ import { Draw, Modify, Snap } from 'ol/interaction';
 import GeometryType from 'ol/geom/GeometryType';
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 import { XYZ, Vector as VectorSource } from 'ol/source';
+import { FeatureLike } from 'ol/Feature';
 import { Fill, Stroke, Style, Circle as CircleStyle, Text } from 'ol/style';
 import GeoJSON from 'ol/format/GeoJSON';
 import { fromLonLat } from 'ol/proj';
 import { defaults, DragPan, MouseWheelZoom, Select } from 'ol/interaction';
 import { SelectEvent } from 'ol/interaction/Select';
 import { platformModifierKeyOnly, click } from 'ol/events/condition';
-import { FormField } from '@grafana/ui';
 import { nanoid } from 'nanoid';
 import axios from 'axios';
-// import clientAPI from './utils/API';
-import Undo from './img/undo.svg';
-import SVG from 'react-inlinesvg';
-import Done from './img/done.svg';
-import Delete from './img/delete.svg';
-// import Stepper from './stepper/Stepper';
+import Stepper from './stepper/Stepper';
 import 'ol/ol.css';
 import './styles/main.css';
-import { FeatureLike } from 'ol/Feature';
 
 interface Props extends PanelProps<MapOptions> {}
 interface State {
@@ -35,7 +29,7 @@ interface State {
   currentStep: number;
 }
 
-// const stepsArray = ['Placing AP & POI', 'Creating Label', 'Send to Server'];
+const stepsArray = ['Place Access Point', 'Place Area of Interest', 'Select Feature to enter Property', 'Send to Server'];
 
 export class MainPanel extends PureComponent<Props, State> {
   id: string;
@@ -105,21 +99,7 @@ export class MainPanel extends PureComponent<Props, State> {
           }),
         });
       },
-      /* new Style({
-        fill: new Fill({
-          color: 'rgba(255, 255, 255, 0.2)',
-        }),
-        stroke: new Stroke({
-          color: '#ffcc33',
-          width: 2,
-        }),
-        image: new CircleStyle({
-          radius: 7,
-          fill: new Fill({
-            color: '#ffcc33',
-          }),
-        }),
-      }), */ zIndex: 2,
+      zIndex: 2,
     });
 
     this.map = new Map({
@@ -161,8 +141,6 @@ export class MainPanel extends PureComponent<Props, State> {
     this.select.on('select', (e: SelectEvent) => {
       const selectedFeature = e.target.getFeatures().item(0);
       if (selectedFeature) {
-        // const label = selectedFeature.get('label') || '';
-        // this.setState(prevState => ({ ...prevState, selectedFeature, propKey: label }));
         const propKey = selectedFeature.getKeys().find((el: string) => el !== 'geometry');
         if (propKey) {
           const propValue = selectedFeature.get(propKey);
@@ -171,10 +149,6 @@ export class MainPanel extends PureComponent<Props, State> {
         } else {
           this.setState(prevState => ({ ...prevState, selectedFeature, propKey: '', propValue: '' }));
         }
-
-        /* const format = new GeoJSON({ featureProjection: 'EPSG:4326' });
-
-        selectedFeature && console.log('selecting...', format.writeFeature(selectedFeature)); */
       } else {
         this.setState(prevState => ({ ...prevState, selectedFeature: null, propKey: '', propValue: '' }));
       }
@@ -184,32 +158,6 @@ export class MainPanel extends PureComponent<Props, State> {
     this.map.addInteraction(this.modify);
 
     this.addInteractions();
-    /*     modify = new Modify({ source: source });
-    this.map.addInteraction(modify);
-
-    draw = new Draw({
-      source: source,
-      type: GeometryType.POLYGON,
-    });
-    this.map.addInteraction(draw);
-    snap = new Snap({ source: source });
-    this.map.addInteraction(snap); */
-
-    /*     draw.on('drawend', e => {
-      console.log('draw end');
-      const geom = e.feature.getGeometry();
-      const format = new GeoJSON({ });
-      const feature = new Feature({
-        geometry: geom,
-      });
-      const obj = format.writeFeature(feature);
-      console.log(obj);
-    });
-
-    modify.on('modifyend', e => {
-      console.log('modify end');
-      console.log(e.features.item(0).getGeometry());
-    }); */
   }
 
   componentDidUpdate(prevProps: Props, prevState: State) {
@@ -246,14 +194,78 @@ export class MainPanel extends PureComponent<Props, State> {
       }
     }
 
-    /*     if (prevState.editMode !== this.state.editMode) {
-      if (!this.state.editMode && this.props.options.geoJSON) {
-        const vectorSource = new VectorSource({
-          features: new GeoJSON().readFeatures(this.props.options.geoJSON as object),
-        });
-        this.geoLayer = new VectorLayer({
-          source: vectorSource,
-          style: new Style({
+    if (prevState.currentStep !== this.state.currentStep) {
+      switch (this.state.currentStep) {
+        case 1:
+          this.setState({ drawOption: 'Point' }, () => this.addInteractions());
+          break;
+        case 2:
+          if (prevState.currentStep === 1) {
+            this.setState({ drawOption: 'Polygon' }, () => this.addInteractions());
+          } else {
+            this.draw.setActive(true);
+            this.snap.setActive(true);
+            this.modify.setActive(true);
+            this.select.setActive(false);
+          }
+          break;
+        case 3:
+          if (prevState.currentStep === 2) {
+            this.draw.setActive(false);
+            this.snap.setActive(false);
+            this.modify.setActive(false);
+            this.select.setActive(true);
+          }
+          break;
+        case 4:
+          const features = this.drawLayer.getSource().getFeatures();
+          const format = new GeoJSON({ featureProjection: 'EPSG:4326' });
+          if (features.length > 0) {
+            const geoJSON = JSON.parse(format.writeFeatures(features));
+            axios
+              .post('http://158.177.187.158:5000/upload-json', { data: geoJSON })
+              .then(res => console.log(res))
+              .catch(err => console.log(err));
+          }
+          break;
+      }
+    }
+  }
+
+  handleUndo = () => {
+    const lastFeature = this.drawLayer
+      .getSource()
+      .getFeatures()
+      .pop();
+    lastFeature && this.drawLayer.getSource().removeFeature(lastFeature);
+  };
+
+  handleDelete = () => {
+    if (this.state.selectedFeature) {
+      this.drawLayer.getSource().removeFeature(this.state.selectedFeature);
+      this.setState(prevState => ({ ...prevState, selectedFeature: null, propKey: '' }));
+    }
+  };
+
+  handleLabelInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    this.setState(prevState => ({ ...prevState, [name]: value }));
+  };
+
+  onKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.which === 13) {
+      const { selectedFeature, propKey, propValue } = this.state;
+      if (selectedFeature && propKey) {
+        const propKeyFromFeature = selectedFeature.getKeys().find((el: string) => el !== 'geometry');
+        if (propKeyFromFeature) {
+          selectedFeature.unset(propKeyFromFeature);
+          selectedFeature.set(propKey, propValue);
+        } else {
+          selectedFeature.set(propKey, propValue);
+        }
+
+        selectedFeature.setStyle(
+          new Style({
             fill: new Fill({
               color: 'rgba(255, 255, 255, 0.2)',
             }),
@@ -267,21 +279,19 @@ export class MainPanel extends PureComponent<Props, State> {
                 color: '#ffcc33',
               }),
             }),
-          }),
-          zIndex: 2,
-        });
-
-        this.map.addLayer(this.geoLayer);
+            text: new Text({
+              stroke: new Stroke({
+                color: '#fff',
+                width: 2,
+              }),
+              font: '14px Calibri,sans-serif',
+              text: `${propKey} ${propValue}`,
+              offsetY: -10,
+            }),
+          })
+        );
       }
-    } */
-  }
-
-  handleUndo = () => {
-    const lastFeature = this.drawLayer
-      .getSource()
-      .getFeatures()
-      .pop();
-    lastFeature && this.drawLayer.getSource().removeFeature(lastFeature);
+    }
   };
 
   handleSave = () => {
@@ -293,88 +303,7 @@ export class MainPanel extends PureComponent<Props, State> {
         .post('http://158.177.187.158:5000/upload-json', { data: geoJSON })
         .then(res => console.log(res))
         .catch(err => console.log(err));
-
-      /*       clientAPI
-        .post('/upload-json', { geoJSON: geoJSON })
-        .then(res => console.log(res))
-        .catch(err => console.log(err)); */
-      // this.props.onOptionsChange({ ...this.props.options, geoJSON });
     }
-  };
-
-  handleDelete = () => {
-    if (this.state.selectedFeature) {
-      this.drawLayer.getSource().removeFeature(this.state.selectedFeature);
-      this.setState(prevState => ({ ...prevState, selectedFeature: null, propKey: '' }));
-    }
-  };
-
-  handleDropDown = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    this.setState({ drawOption: e.target.value }, () => this.addInteractions());
-  };
-
-  handleLabelInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    this.setState(prevState => ({ ...prevState, [name]: value }));
-  };
-
-  handleLabelSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const { selectedFeature, propKey, propValue } = this.state;
-    if (selectedFeature && propKey) {
-      const propKeyFromFeature = selectedFeature.getKeys().find((el: string) => el !== 'geometry');
-      if (propKeyFromFeature) {
-        selectedFeature.unset(propKeyFromFeature);
-        selectedFeature.set(propKey, propValue);
-      } else {
-        selectedFeature.set(propKey, propValue);
-      }
-
-      selectedFeature.setStyle(
-        new Style({
-          fill: new Fill({
-            color: 'rgba(255, 255, 255, 0.2)',
-          }),
-          stroke: new Stroke({
-            color: '#ffcc33',
-            width: 2,
-          }),
-          image: new CircleStyle({
-            radius: 7,
-            fill: new Fill({
-              color: '#ffcc33',
-            }),
-          }),
-          text: new Text({
-            stroke: new Stroke({
-              color: '#fff',
-              width: 2,
-            }),
-            font: '14px Calibri,sans-serif',
-            text: `${propKey} ${propValue}`,
-            offsetY: -10,
-          }),
-        })
-      );
-    }
-
-    // selectedFeature && selectedFeature.set('label', propKey);
-  };
-
-  handleSwitchMode = () => {
-    if (this.state.editMode) {
-      this.draw.setActive(true);
-      this.snap.setActive(true);
-      this.modify.setActive(true);
-      this.select.setActive(false);
-    } else {
-      this.draw.setActive(false);
-      this.snap.setActive(false);
-      this.modify.setActive(false);
-      this.select.setActive(true);
-    }
-    this.setState({ editMode: !this.state.editMode });
   };
 
   addInteractions = () => {
@@ -394,9 +323,21 @@ export class MainPanel extends PureComponent<Props, State> {
     this.map.addInteraction(this.snap);
   };
 
+  handleClick(clickType: string) {
+    const { currentStep } = this.state;
+    let newStep = currentStep;
+    clickType === 'next' ? newStep++ : newStep--;
+
+    if (newStep > 0 && newStep <= 5) {
+      this.setState({
+        currentStep: newStep,
+      });
+    }
+  }
+
   render() {
     const { width, height } = this.props;
-    const { drawOption, editMode, propKey, propValue, selectedFeature /* , currentStep */ } = this.state;
+    const { propKey, propValue, selectedFeature, currentStep } = this.state;
 
     return (
       <div
@@ -404,77 +345,44 @@ export class MainPanel extends PureComponent<Props, State> {
           width,
           height,
         }}
+        className="grid-area-wrapper"
       >
-        <div className="flex-row space-between">
-          {!editMode ? (
-            <div className="flex-row">
-              <select onChange={this.handleDropDown} value={drawOption}>
-                <option value="Point">Access Point Location</option>
-                <option value="Polygon">Polygon of Interest</option>
-              </select>
-              <SVG src={Undo} onClick={this.handleUndo} className="img-button" />
-            </div>
-          ) : (
-            <div className="flex-row">
-              <SVG src={Done} onClick={this.handleSave} className="img-button" />
-              {selectedFeature && (
-                <>
-                  <SVG src={Delete} onClick={this.handleDelete} className="img-button" />
+        <div id={this.id} className="inner-area"></div>
 
-                  <form onSubmit={this.handleLabelSubmit}>
-                    {/* <input className="label-input" onChange={this.handleLabelInput} value={propKey} /> */}
-                    <div className="flex-row">
-                      <FormField
-                        label="Key"
-                        labelWidth={3}
-                        inputWidth={5}
-                        type="text"
-                        name="propKey"
-                        value={propKey}
-                        onChange={this.handleLabelInput}
-                      />
-                      <FormField
-                        label="Value"
-                        labelWidth={4}
-                        inputWidth={5}
-                        type="text"
-                        name="propValue"
-                        value={propValue}
-                        onChange={this.handleLabelInput}
-                      />
-                      {propKey && (
-                        <button className="img-button" type="submit">
-                          Save
-                        </button>
-                      )}
-                    </div>
-                  </form>
-                </>
-              )}
+        <div className="stepper-container-vertical ">
+          <div style={{ textAlign: 'center' }}>
+            <span>Draw Tool &nbsp;</span>
+            <button onClick={this.handleUndo}>Undo</button>
+            <button onClick={this.handleDelete}>Delete</button>
+          </div>
+          {selectedFeature && (
+            <div className="input-fields">
+              <input
+                type="text"
+                className="form__input"
+                id="propKey"
+                placeholder="Key"
+                name="propKey"
+                value={propKey}
+                onChange={this.handleLabelInput}
+              />
+              <input
+                type="text"
+                className="form__input"
+                id="propValue"
+                placeholder="Value"
+                name="propValue"
+                value={propValue}
+                onChange={this.handleLabelInput}
+                onKeyPress={this.onKeyPress}
+              />
             </div>
           )}
-          <div className="flex-row">
-            <section className="text-mode">{editMode ? <p>Setting Labels</p> : <p>Placing AP and POI</p>}</section>
-            <div className="gf-form-switch" style={{ border: '1px solid #d9d9d9', borderRadius: '1px' }} onClick={this.handleSwitchMode}>
-              <input type="checkbox" checked={editMode} />
-              <span className="gf-form-switch__slider"></span>
-            </div>
+          <Stepper direction="vertical" currentStepNumber={currentStep - 1} steps={stepsArray} stepColor="#ee5253" />
+          <div className="buttons-container">
+            <button onClick={() => this.handleClick('')}>Previous</button>
+            <button onClick={() => this.handleClick('next')}>Next</button>
           </div>
-        </div>
-        <div
-          id={this.id}
-          style={{
-            width,
-            height: height - 40,
-          }}
-          // className="grid-area-wrapper"
-        >
-          {/* <div id={this.id} className="inner-area"></div>
-          <div style={{ display: 'flex' }}>
-            <div className="stepper-container-vertical ">
-              <Stepper direction="vertical" currentStepNumber={currentStep - 1} steps={stepsArray} stepColor="#ee5253" />
-            </div>
-          </div> */}
         </div>
       </div>
     );

@@ -1917,6 +1917,24 @@ module.exports = exports;
 
 /***/ }),
 
+/***/ "../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/sass-loader/lib/loader.js!./stepper/Stepper.css":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ../node_modules/css-loader/dist/cjs.js??ref--8-1!../node_modules/postcss-loader/src??ref--8-2!../node_modules/sass-loader/lib/loader.js!./stepper/Stepper.css ***!
+  \*********************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(true);
+// Module
+exports.push([module.i, ".stepper-wrapper-horizontal {\n  display: flex;\n  justify-content: space-between; }\n\n.stepper-wrapper-horizontal .step-wrapper {\n  width: 23%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  position: relative; }\n\n.stepper-wrapper-horizontal .step-number {\n  border-radius: 50%;\n  border: 1px solid grey;\n  width: 20px;\n  height: 20px;\n  padding: 3px;\n  text-align: center;\n  margin-bottom: 1.2rem; }\n\n.stepper-wrapper-horizontal .divider-line {\n  height: 1px;\n  background-color: #bdbdbd;\n  position: absolute;\n  top: 20%;\n  left: 70%; }\n\n.stepper-wrapper-horizontal .divider-line-2 {\n  width: 296%; }\n\n.stepper-wrapper-horizontal .divider-line-3 {\n  width: 125%; }\n\n.stepper-wrapper-horizontal .divider-line-4 {\n  width: 70%; }\n\n.stepper-wrapper-horizontal .divider-line-5 {\n  width: 60%; }\n\n.stepper-wrapper-vertical .step-wrapper {\n  display: flex;\n  align-items: center;\n  margin-bottom: 1.2rem;\n  position: relative; }\n\n.stepper-wrapper-vertical .step-number {\n  border-radius: 50%;\n  width: 18px;\n  height: 18px;\n  padding: 4.5px 4px 4px;\n  text-align: center;\n  vertical-align: middle;\n  line-height: 9px; }\n\n.stepper-wrapper-vertical .step-description {\n  margin-left: 1.2rem;\n  padding-bottom: 3px; }\n\n.stepper-wrapper-vertical .divider-line {\n  height: 17px;\n  width: 1px;\n  background-color: #bdbdbd;\n  position: absolute;\n  top: 100%;\n  /* left: 6.4%; */\n  left: 3%; }\n\n.step-number-selected {\n  border: 1px solid #bdbdbd;\n  color: #fff; }\n\n.step-number-disabled {\n  border: 1px solid #838383; }\n\n.step-description-active {\n  font-weight: bold; }\n", "",{"version":3,"sources":["Stepper.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,8BAA8B,EAAE;;AAElC;EACE,UAAU;EACV,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,kBAAkB,EAAE;;AAEtB;EACE,kBAAkB;EAClB,sBAAsB;EACtB,WAAW;EACX,YAAY;EACZ,YAAY;EACZ,kBAAkB;EAClB,qBAAqB,EAAE;;AAEzB;EACE,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,QAAQ;EACR,SAAS,EAAE;;AAEb;EACE,WAAW,EAAE;;AAEf;EACE,WAAW,EAAE;;AAEf;EACE,UAAU,EAAE;;AAEd;EACE,UAAU,EAAE;;AAEd;EACE,aAAa;EACb,mBAAmB;EACnB,qBAAqB;EACrB,kBAAkB,EAAE;;AAEtB;EACE,kBAAkB;EAClB,WAAW;EACX,YAAY;EACZ,sBAAsB;EACtB,kBAAkB;EAClB,sBAAsB;EACtB,gBAAgB,EAAE;;AAEpB;EACE,mBAAmB;EACnB,mBAAmB,EAAE;;AAEvB;EACE,YAAY;EACZ,UAAU;EACV,yBAAyB;EACzB,kBAAkB;EAClB,SAAS;EACT,gBAAgB;EAChB,QAAQ,EAAE;;AAEZ;EACE,yBAAyB;EACzB,WAAW,EAAE;;AAEf;EACE,yBAAyB,EAAE;;AAE7B;EACE,iBAAiB,EAAE","file":"Stepper.css","sourcesContent":[".stepper-wrapper-horizontal {\n  display: flex;\n  justify-content: space-between; }\n\n.stepper-wrapper-horizontal .step-wrapper {\n  width: 23%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  position: relative; }\n\n.stepper-wrapper-horizontal .step-number {\n  border-radius: 50%;\n  border: 1px solid grey;\n  width: 20px;\n  height: 20px;\n  padding: 3px;\n  text-align: center;\n  margin-bottom: 1.2rem; }\n\n.stepper-wrapper-horizontal .divider-line {\n  height: 1px;\n  background-color: #bdbdbd;\n  position: absolute;\n  top: 20%;\n  left: 70%; }\n\n.stepper-wrapper-horizontal .divider-line-2 {\n  width: 296%; }\n\n.stepper-wrapper-horizontal .divider-line-3 {\n  width: 125%; }\n\n.stepper-wrapper-horizontal .divider-line-4 {\n  width: 70%; }\n\n.stepper-wrapper-horizontal .divider-line-5 {\n  width: 60%; }\n\n.stepper-wrapper-vertical .step-wrapper {\n  display: flex;\n  align-items: center;\n  margin-bottom: 1.2rem;\n  position: relative; }\n\n.stepper-wrapper-vertical .step-number {\n  border-radius: 50%;\n  width: 18px;\n  height: 18px;\n  padding: 4.5px 4px 4px;\n  text-align: center;\n  vertical-align: middle;\n  line-height: 9px; }\n\n.stepper-wrapper-vertical .step-description {\n  margin-left: 1.2rem;\n  padding-bottom: 3px; }\n\n.stepper-wrapper-vertical .divider-line {\n  height: 17px;\n  width: 1px;\n  background-color: #bdbdbd;\n  position: absolute;\n  top: 100%;\n  /* left: 6.4%; */\n  left: 3%; }\n\n.step-number-selected {\n  border: 1px solid #bdbdbd;\n  color: #fff; }\n\n.step-number-disabled {\n  border: 1px solid #838383; }\n\n.step-description-active {\n  font-weight: bold; }\n\n/*# sourceMappingURL=Stepper.css.map */\n"]}]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
 /***/ "../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/sass-loader/lib/loader.js!./styles/main.css":
 /*!*****************************************************************************************************************************************************************!*\
   !*** ../node_modules/css-loader/dist/cjs.js??ref--8-1!../node_modules/postcss-loader/src??ref--8-2!../node_modules/sass-loader/lib/loader.js!./styles/main.css ***!
@@ -1928,7 +1946,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".img-button {\n  height: 35px;\n  width: 35px;\n  border: 1px solid #d9d9d9;\n  border-radius: 2px;\n  padding: 2px;\n  cursor: pointer; }\n\n.img-button:active {\n  background-color: #e5e5e5;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(3px); }\n\n.flex-row {\n  display: flex;\n  flex-direction: row; }\n\n.space-between {\n  justify-content: space-between; }\n\n.option-dropdown {\n  height: 35px;\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.label-input {\n  height: 35px;\n  padding: 2px;\n  border: 1px solid #d9d9d9; }\n\n.text-mode {\n  display: flex;\n  height: 35px;\n  padding: 2px;\n  margin-right: 10px; }\n\n.text-mode p {\n  margin: auto;\n  text-align: center; }\n\n.grid-area-wrapper {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 3fr 1fr;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center; }\n\n.buttons-container button {\n  margin: 0 2rem;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n", "",{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,WAAW;EACX,yBAAyB;EACzB,kBAAkB;EAClB,YAAY;EACZ,eAAe,EAAE;;AAEnB;EACE,yBAAyB;EACzB,yBAAyB;EACzB,0BAA0B,EAAE;;AAE9B;EACE,aAAa;EACb,mBAAmB,EAAE;;AAEvB;EACE,8BAA8B,EAAE;;AAElC;EACE,YAAY;EACZ,iBAAiB;EACjB,oBAAoB,EAAE;;AAExB;EACE,YAAY;EACZ,YAAY;EACZ,yBAAyB,EAAE;;AAE7B;EACE,aAAa;EACb,YAAY;EACZ,YAAY;EACZ,kBAAkB,EAAE;;AAEtB;EACE,YAAY;EACZ,kBAAkB,EAAE;;AAEtB;EACE,iBAAa;EAAb,aAAa;EACb,yBAA8B;EAA9B,8BAA8B,EAAE;;AAElC;EACE,sBAAsB,EAAE;;AAE1B;EACE,6BAA6B;EAC7B,yBAAyB;EACzB,kBAAkB;EAClB,iBAAiB;EACjB,aAAa;EACb,UAAU,EAAE;;AAEd;EACE,sBAAsB;EACtB,+BAA+B;EAC/B,kBAAkB;EAClB,yBAAyB;EACzB,SAAS;EACT,aAAa;EACb,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,WAAW,EAAE;;AAEf;EACE,kBAAkB,EAAE;;AAEtB;EACE,cAAc;EACd,YAAY;EACZ,YAAY;EACZ,6BAA6B;EAC7B,YAAY,EAAE","file":"main.css","sourcesContent":[".img-button {\n  height: 35px;\n  width: 35px;\n  border: 1px solid #d9d9d9;\n  border-radius: 2px;\n  padding: 2px;\n  cursor: pointer; }\n\n.img-button:active {\n  background-color: #e5e5e5;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(3px); }\n\n.flex-row {\n  display: flex;\n  flex-direction: row; }\n\n.space-between {\n  justify-content: space-between; }\n\n.option-dropdown {\n  height: 35px;\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.label-input {\n  height: 35px;\n  padding: 2px;\n  border: 1px solid #d9d9d9; }\n\n.text-mode {\n  display: flex;\n  height: 35px;\n  padding: 2px;\n  margin-right: 10px; }\n\n.text-mode p {\n  margin: auto;\n  text-align: center; }\n\n.grid-area-wrapper {\n  display: grid;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center; }\n\n.buttons-container button {\n  margin: 0 2rem;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n"]}]);
+exports.push([module.i, ".grid-area-wrapper {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 3fr 1fr;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center;\n  /* display: flex;\r\n  justify-content: space-around; */ }\n\n.buttons-container button {\n  margin: 0 2px;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n\n.buttons-container button:active {\n  background-color: #ec3b3c;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(1px); }\n\n.input-fields {\n  text-align: center; }\n\n.form__label {\n  font-size: 1rem;\n  margin-left: 2rem;\n  margin-top: 0.5rem;\n  display: block;\n  transition: all 0.3s;\n  transform: translateY(0rem); }\n\n.form__input {\n  font-family: 'Roboto', sans-serif;\n  color: #333;\n  font-size: 1rem;\n  /*   margin: 0 auto; */\n  margin-right: 5px;\n  padding: 0.5rem 1rem;\n  border-radius: 0.2rem;\n  background-color: white;\n  border: none;\n  width: 40%;\n  /* display: block; */\n  border-bottom: 0.3rem solid transparent;\n  transition: all 0.3s;\n  border: 1px solid #7f7f7f; }\n\n.form__input:placeholder-shown + .form__label {\n  opacity: 0;\n  visibility: hidden;\n  transform: translateY(-4rem); }\n", "",{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;EACE,iBAAa;EAAb,aAAa;EACb,yBAA8B;EAA9B,8BAA8B,EAAE;;AAElC;EACE,sBAAsB,EAAE;;AAE1B;EACE,6BAA6B;EAC7B,yBAAyB;EACzB,kBAAkB;EAClB,iBAAiB;EACjB,aAAa;EACb,UAAU,EAAE;;AAEd;EACE,sBAAsB;EACtB,+BAA+B;EAC/B,kBAAkB;EAClB,yBAAyB;EACzB,SAAS;EACT,aAAa;EACb,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,WAAW,EAAE;;AAEf;EACE,kBAAkB;EAClB;kCACgC,EAAE;;AAEpC;EACE,aAAa;EACb,YAAY;EACZ,YAAY;EACZ,6BAA6B;EAC7B,YAAY,EAAE;;AAEhB;EACE,yBAAyB;EACzB,yBAAyB;EACzB,0BAA0B,EAAE;;AAE9B;EACE,kBAAkB,EAAE;;AAEtB;EACE,eAAe;EACf,iBAAiB;EACjB,kBAAkB;EAClB,cAAc;EACd,oBAAoB;EACpB,2BAA2B,EAAE;;AAE/B;EACE,iCAAiC;EACjC,WAAW;EACX,eAAe;EACf,sBAAsB;EACtB,iBAAiB;EACjB,oBAAoB;EACpB,qBAAqB;EACrB,uBAAuB;EACvB,YAAY;EACZ,UAAU;EACV,oBAAoB;EACpB,uCAAuC;EACvC,oBAAoB;EACpB,yBAAyB,EAAE;;AAE7B;EACE,UAAU;EACV,kBAAkB;EAElB,4BAA4B,EAAE","file":"main.css","sourcesContent":[".grid-area-wrapper {\n  display: grid;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center;\n  /* display: flex;\r\n  justify-content: space-around; */ }\n\n.buttons-container button {\n  margin: 0 2px;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n\n.buttons-container button:active {\n  background-color: #ec3b3c;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(1px); }\n\n.input-fields {\n  text-align: center; }\n\n.form__label {\n  font-size: 1rem;\n  margin-left: 2rem;\n  margin-top: 0.5rem;\n  display: block;\n  transition: all 0.3s;\n  transform: translateY(0rem); }\n\n.form__input {\n  font-family: 'Roboto', sans-serif;\n  color: #333;\n  font-size: 1rem;\n  /*   margin: 0 auto; */\n  margin-right: 5px;\n  padding: 0.5rem 1rem;\n  border-radius: 0.2rem;\n  background-color: white;\n  border: none;\n  width: 40%;\n  /* display: block; */\n  border-bottom: 0.3rem solid transparent;\n  transition: all 0.3s;\n  border: 1px solid #7f7f7f; }\n\n.form__input:placeholder-shown + .form__label {\n  opacity: 0;\n  visibility: hidden;\n  -webkit-transform: translateY(-4rem);\n  transform: translateY(-4rem); }\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -2163,54 +2181,6 @@ function addTouchToPointerListener(target, touchType, pointerType) {
     });
 }
 //# sourceMappingURL=elm-pep.js.map
-
-/***/ }),
-
-/***/ "../node_modules/exenv/index.js":
-/*!**************************************!*\
-  !*** ../node_modules/exenv/index.js ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2015 Jed Watson.
-  Based on code that is Copyright 2013-2015, Facebook, Inc.
-  All rights reserved.
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var canUseDOM = !!(
-		typeof window !== 'undefined' &&
-		window.document &&
-		window.document.createElement
-	);
-
-	var ExecutionEnvironment = {
-
-		canUseDOM: canUseDOM,
-
-		canUseWorkers: typeof Worker !== 'undefined',
-
-		canUseEventListeners:
-			canUseDOM && !!(window.addEventListener || window.attachEvent),
-
-		canUseViewport: canUseDOM && !!window.screen
-
-	};
-
-	if (true) {
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return ExecutionEnvironment;
-		}).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {}
-
-}());
-
 
 /***/ }),
 
@@ -62767,1060 +62737,6 @@ return RBush;
 
 /***/ }),
 
-/***/ "../node_modules/react-from-dom/esm/helpers.js":
-/*!*****************************************************!*\
-  !*** ../node_modules/react-from-dom/esm/helpers.js ***!
-  \*****************************************************/
-/*! exports provided: styleToObject, noTextChildNodes, possibleStandardNames */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "styleToObject", function() { return styleToObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "noTextChildNodes", function() { return noTextChildNodes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "possibleStandardNames", function() { return possibleStandardNames; });
-var __read = (undefined && undefined.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var styleToObject = function (input) {
-    var attributes = input.split(/ ?; ?/);
-    return attributes.reduce(function (acc, d) {
-        var _a = __read(d.split(/ ?: ?/), 2), key = _a[0], value = _a[1];
-        if (key && value) {
-            acc[key.replace(/-(\w)/g, function (_$0, $1) { return $1.toUpperCase(); })] = Number.isNaN(Number(value))
-                ? value
-                : Number(value);
-        }
-        return acc;
-    }, {});
-};
-var noTextChildNodes = [
-    'br',
-    'col',
-    'colgroup',
-    'dl',
-    'hr',
-    'iframe',
-    'img',
-    'input',
-    'link',
-    'menuitem',
-    'meta',
-    'ol',
-    'param',
-    'select',
-    'table',
-    'tbody',
-    'tfoot',
-    'thead',
-    'tr',
-    'ul',
-    'wbr',
-];
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-// Taken from https://raw.githubusercontent.com/facebook/react/baff5cc2f69d30589a5dc65b089e47765437294b/packages/react-dom/src/shared/possibleStandardNames.js
-// tslint:disable:object-literal-sort-keys
-var possibleStandardNames = {
-    // HTML
-    'accept-charset': 'acceptCharset',
-    acceptcharset: 'acceptCharset',
-    accesskey: 'accessKey',
-    allowfullscreen: 'allowFullScreen',
-    autocapitalize: 'autoCapitalize',
-    autocomplete: 'autoComplete',
-    autocorrect: 'autoCorrect',
-    autofocus: 'autoFocus',
-    autoplay: 'autoPlay',
-    autosave: 'autoSave',
-    cellpadding: 'cellPadding',
-    cellspacing: 'cellSpacing',
-    charset: 'charSet',
-    class: 'className',
-    classid: 'classID',
-    classname: 'className',
-    colspan: 'colSpan',
-    contenteditable: 'contentEditable',
-    contextmenu: 'contextMenu',
-    controlslist: 'controlsList',
-    crossorigin: 'crossOrigin',
-    dangerouslysetinnerhtml: 'dangerouslySetInnerHTML',
-    datetime: 'dateTime',
-    defaultchecked: 'defaultChecked',
-    defaultvalue: 'defaultValue',
-    enctype: 'encType',
-    for: 'htmlFor',
-    formmethod: 'formMethod',
-    formaction: 'formAction',
-    formenctype: 'formEncType',
-    formnovalidate: 'formNoValidate',
-    formtarget: 'formTarget',
-    frameborder: 'frameBorder',
-    hreflang: 'hrefLang',
-    htmlfor: 'htmlFor',
-    httpequiv: 'httpEquiv',
-    'http-equiv': 'httpEquiv',
-    icon: 'icon',
-    innerhtml: 'innerHTML',
-    inputmode: 'inputMode',
-    itemid: 'itemID',
-    itemprop: 'itemProp',
-    itemref: 'itemRef',
-    itemscope: 'itemScope',
-    itemtype: 'itemType',
-    keyparams: 'keyParams',
-    keytype: 'keyType',
-    marginwidth: 'marginWidth',
-    marginheight: 'marginHeight',
-    maxlength: 'maxLength',
-    mediagroup: 'mediaGroup',
-    minlength: 'minLength',
-    nomodule: 'noModule',
-    novalidate: 'noValidate',
-    playsinline: 'playsInline',
-    radiogroup: 'radioGroup',
-    readonly: 'readOnly',
-    referrerpolicy: 'referrerPolicy',
-    rowspan: 'rowSpan',
-    spellcheck: 'spellCheck',
-    srcdoc: 'srcDoc',
-    srclang: 'srcLang',
-    srcset: 'srcSet',
-    tabindex: 'tabIndex',
-    usemap: 'useMap',
-    // SVG
-    accentheight: 'accentHeight',
-    'accent-height': 'accentHeight',
-    alignmentbaseline: 'alignmentBaseline',
-    'alignment-baseline': 'alignmentBaseline',
-    allowreorder: 'allowReorder',
-    arabicform: 'arabicForm',
-    'arabic-form': 'arabicForm',
-    attributename: 'attributeName',
-    attributetype: 'attributeType',
-    autoreverse: 'autoReverse',
-    basefrequency: 'baseFrequency',
-    baselineshift: 'baselineShift',
-    'baseline-shift': 'baselineShift',
-    baseprofile: 'baseProfile',
-    calcmode: 'calcMode',
-    capheight: 'capHeight',
-    'cap-height': 'capHeight',
-    clippath: 'clipPath',
-    'clip-path': 'clipPath',
-    clippathunits: 'clipPathUnits',
-    cliprule: 'clipRule',
-    'clip-rule': 'clipRule',
-    colorinterpolation: 'colorInterpolation',
-    'color-interpolation': 'colorInterpolation',
-    colorinterpolationfilters: 'colorInterpolationFilters',
-    'color-interpolation-filters': 'colorInterpolationFilters',
-    colorprofile: 'colorProfile',
-    'color-profile': 'colorProfile',
-    colorrendering: 'colorRendering',
-    'color-rendering': 'colorRendering',
-    contentscripttype: 'contentScriptType',
-    contentstyletype: 'contentStyleType',
-    diffuseconstant: 'diffuseConstant',
-    dominantbaseline: 'dominantBaseline',
-    'dominant-baseline': 'dominantBaseline',
-    edgemode: 'edgeMode',
-    enablebackground: 'enableBackground',
-    'enable-background': 'enableBackground',
-    externalresourcesrequired: 'externalResourcesRequired',
-    fillopacity: 'fillOpacity',
-    'fill-opacity': 'fillOpacity',
-    fillrule: 'fillRule',
-    'fill-rule': 'fillRule',
-    filterres: 'filterRes',
-    filterunits: 'filterUnits',
-    floodopacity: 'floodOpacity',
-    'flood-opacity': 'floodOpacity',
-    floodcolor: 'floodColor',
-    'flood-color': 'floodColor',
-    fontfamily: 'fontFamily',
-    'font-family': 'fontFamily',
-    fontsize: 'fontSize',
-    'font-size': 'fontSize',
-    fontsizeadjust: 'fontSizeAdjust',
-    'font-size-adjust': 'fontSizeAdjust',
-    fontstretch: 'fontStretch',
-    'font-stretch': 'fontStretch',
-    fontstyle: 'fontStyle',
-    'font-style': 'fontStyle',
-    fontvariant: 'fontVariant',
-    'font-variant': 'fontVariant',
-    fontweight: 'fontWeight',
-    'font-weight': 'fontWeight',
-    glyphname: 'glyphName',
-    'glyph-name': 'glyphName',
-    glyphorientationhorizontal: 'glyphOrientationHorizontal',
-    'glyph-orientation-horizontal': 'glyphOrientationHorizontal',
-    glyphorientationvertical: 'glyphOrientationVertical',
-    'glyph-orientation-vertical': 'glyphOrientationVertical',
-    glyphref: 'glyphRef',
-    gradienttransform: 'gradientTransform',
-    gradientunits: 'gradientUnits',
-    horizadvx: 'horizAdvX',
-    'horiz-adv-x': 'horizAdvX',
-    horizoriginx: 'horizOriginX',
-    'horiz-origin-x': 'horizOriginX',
-    imagerendering: 'imageRendering',
-    'image-rendering': 'imageRendering',
-    kernelmatrix: 'kernelMatrix',
-    kernelunitlength: 'kernelUnitLength',
-    keypoints: 'keyPoints',
-    keysplines: 'keySplines',
-    keytimes: 'keyTimes',
-    lengthadjust: 'lengthAdjust',
-    letterspacing: 'letterSpacing',
-    'letter-spacing': 'letterSpacing',
-    lightingcolor: 'lightingColor',
-    'lighting-color': 'lightingColor',
-    limitingconeangle: 'limitingConeAngle',
-    markerend: 'markerEnd',
-    'marker-end': 'markerEnd',
-    markerheight: 'markerHeight',
-    markermid: 'markerMid',
-    'marker-mid': 'markerMid',
-    markerstart: 'markerStart',
-    'marker-start': 'markerStart',
-    markerunits: 'markerUnits',
-    markerwidth: 'markerWidth',
-    maskcontentunits: 'maskContentUnits',
-    maskunits: 'maskUnits',
-    numoctaves: 'numOctaves',
-    overlineposition: 'overlinePosition',
-    'overline-position': 'overlinePosition',
-    overlinethickness: 'overlineThickness',
-    'overline-thickness': 'overlineThickness',
-    paintorder: 'paintOrder',
-    'paint-order': 'paintOrder',
-    'panose-1': 'panose1',
-    pathlength: 'pathLength',
-    patterncontentunits: 'patternContentUnits',
-    patterntransform: 'patternTransform',
-    patternunits: 'patternUnits',
-    pointerevents: 'pointerEvents',
-    'pointer-events': 'pointerEvents',
-    pointsatx: 'pointsAtX',
-    pointsaty: 'pointsAtY',
-    pointsatz: 'pointsAtZ',
-    preservealpha: 'preserveAlpha',
-    preserveaspectratio: 'preserveAspectRatio',
-    primitiveunits: 'primitiveUnits',
-    refx: 'refX',
-    refy: 'refY',
-    renderingintent: 'renderingIntent',
-    'rendering-intent': 'renderingIntent',
-    repeatcount: 'repeatCount',
-    repeatdur: 'repeatDur',
-    requiredextensions: 'requiredExtensions',
-    requiredfeatures: 'requiredFeatures',
-    shaperendering: 'shapeRendering',
-    'shape-rendering': 'shapeRendering',
-    specularconstant: 'specularConstant',
-    specularexponent: 'specularExponent',
-    spreadmethod: 'spreadMethod',
-    startoffset: 'startOffset',
-    stddeviation: 'stdDeviation',
-    stitchtiles: 'stitchTiles',
-    stopcolor: 'stopColor',
-    'stop-color': 'stopColor',
-    stopopacity: 'stopOpacity',
-    'stop-opacity': 'stopOpacity',
-    strikethroughposition: 'strikethroughPosition',
-    'strikethrough-position': 'strikethroughPosition',
-    strikethroughthickness: 'strikethroughThickness',
-    'strikethrough-thickness': 'strikethroughThickness',
-    strokedasharray: 'strokeDasharray',
-    'stroke-dasharray': 'strokeDasharray',
-    strokedashoffset: 'strokeDashoffset',
-    'stroke-dashoffset': 'strokeDashoffset',
-    strokelinecap: 'strokeLinecap',
-    'stroke-linecap': 'strokeLinecap',
-    strokelinejoin: 'strokeLinejoin',
-    'stroke-linejoin': 'strokeLinejoin',
-    strokemiterlimit: 'strokeMiterlimit',
-    'stroke-miterlimit': 'strokeMiterlimit',
-    strokewidth: 'strokeWidth',
-    'stroke-width': 'strokeWidth',
-    strokeopacity: 'strokeOpacity',
-    'stroke-opacity': 'strokeOpacity',
-    suppresscontenteditablewarning: 'suppressContentEditableWarning',
-    suppresshydrationwarning: 'suppressHydrationWarning',
-    surfacescale: 'surfaceScale',
-    systemlanguage: 'systemLanguage',
-    tablevalues: 'tableValues',
-    targetx: 'targetX',
-    targety: 'targetY',
-    textanchor: 'textAnchor',
-    'text-anchor': 'textAnchor',
-    textdecoration: 'textDecoration',
-    'text-decoration': 'textDecoration',
-    textlength: 'textLength',
-    textrendering: 'textRendering',
-    'text-rendering': 'textRendering',
-    underlineposition: 'underlinePosition',
-    'underline-position': 'underlinePosition',
-    underlinethickness: 'underlineThickness',
-    'underline-thickness': 'underlineThickness',
-    unicodebidi: 'unicodeBidi',
-    'unicode-bidi': 'unicodeBidi',
-    unicoderange: 'unicodeRange',
-    'unicode-range': 'unicodeRange',
-    unitsperem: 'unitsPerEm',
-    'units-per-em': 'unitsPerEm',
-    unselectable: 'unselectable',
-    valphabetic: 'vAlphabetic',
-    'v-alphabetic': 'vAlphabetic',
-    vectoreffect: 'vectorEffect',
-    'vector-effect': 'vectorEffect',
-    vertadvy: 'vertAdvY',
-    'vert-adv-y': 'vertAdvY',
-    vertoriginx: 'vertOriginX',
-    'vert-origin-x': 'vertOriginX',
-    vertoriginy: 'vertOriginY',
-    'vert-origin-y': 'vertOriginY',
-    vhanging: 'vHanging',
-    'v-hanging': 'vHanging',
-    videographic: 'vIdeographic',
-    'v-ideographic': 'vIdeographic',
-    viewbox: 'viewBox',
-    viewtarget: 'viewTarget',
-    vmathematical: 'vMathematical',
-    'v-mathematical': 'vMathematical',
-    wordspacing: 'wordSpacing',
-    'word-spacing': 'wordSpacing',
-    writingmode: 'writingMode',
-    'writing-mode': 'writingMode',
-    xchannelselector: 'xChannelSelector',
-    xheight: 'xHeight',
-    'x-height': 'xHeight',
-    xlinkactuate: 'xlinkActuate',
-    'xlink:actuate': 'xlinkActuate',
-    xlinkarcrole: 'xlinkArcrole',
-    'xlink:arcrole': 'xlinkArcrole',
-    xlinkhref: 'xlinkHref',
-    'xlink:href': 'xlinkHref',
-    xlinkrole: 'xlinkRole',
-    'xlink:role': 'xlinkRole',
-    xlinkshow: 'xlinkShow',
-    'xlink:show': 'xlinkShow',
-    xlinktitle: 'xlinkTitle',
-    'xlink:title': 'xlinkTitle',
-    xlinktype: 'xlinkType',
-    'xlink:type': 'xlinkType',
-    xmlbase: 'xmlBase',
-    'xml:base': 'xmlBase',
-    xmllang: 'xmlLang',
-    'xml:lang': 'xmlLang',
-    'xml:space': 'xmlSpace',
-    xmlnsxlink: 'xmlnsXlink',
-    'xmlns:xlink': 'xmlnsXlink',
-    xmlspace: 'xmlSpace',
-    ychannelselector: 'yChannelSelector',
-    zoomandpan: 'zoomAndPan',
-    // event handlers
-    onblur: 'onBlur',
-    onchange: 'onChange',
-    onclick: 'onClick',
-    oncontextmenu: 'onContextMenu',
-    ondoubleclick: 'onDoubleClick',
-    ondrag: 'onDrag',
-    ondragend: 'onDragEnd',
-    ondragenter: 'onDragEnter',
-    ondragexit: 'onDragExit',
-    ondragleave: 'onDragLeave',
-    ondragover: 'onDragOver',
-    ondragstart: 'onDragStart',
-    ondrop: 'onDrop',
-    onerror: 'onError',
-    onfocus: 'onFocus',
-    oninput: 'onInput',
-    oninvalid: 'onInvalid',
-    onkeydown: 'onKeyDown',
-    onkeypress: 'onKeyPress',
-    onkeyup: 'onKeyUp',
-    onload: 'onLoad',
-    onmousedown: 'onMouseDown',
-    onmouseenter: 'onMouseEnter',
-    onmouseleave: 'onMouseLeave',
-    onmousemove: 'onMouseMove',
-    onmouseout: 'onMouseOut',
-    onmouseover: 'onMouseOver',
-    onmouseup: 'onMouseUp',
-    onscroll: 'onScroll',
-    onsubmit: 'onSubmit',
-    ontouchcancel: 'onTouchCancel',
-    ontouchend: 'onTouchEnd',
-    ontouchmove: 'onTouchMove',
-    ontouchstart: 'onTouchStart',
-    onwheel: 'onWheel',
-};
-//# sourceMappingURL=helpers.js.map
-
-/***/ }),
-
-/***/ "../node_modules/react-from-dom/esm/index.js":
-/*!***************************************************!*\
-  !*** ../node_modules/react-from-dom/esm/index.js ***!
-  \***************************************************/
-/*! exports provided: convertFromNode, convertFromString, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "convertFromNode", function() { return convertFromNode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "convertFromString", function() { return convertFromString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return convert; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers */ "../node_modules/react-from-dom/esm/helpers.js");
-var __assign = (undefined && undefined.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __read = (undefined && undefined.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __spread = (undefined && undefined.__spread) || function () {
-    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
-    return ar;
-};
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
-
-function parseAttributes(node, reactKey) {
-    var attributes = {
-        key: reactKey,
-    };
-    /* istanbul ignore else */
-    if (node instanceof Element) {
-        var nodeClassNames = node.getAttribute('class');
-        if (nodeClassNames) {
-            attributes.className = nodeClassNames;
-        }
-        __spread(node.attributes).forEach(function (d) {
-            switch (d.name) {
-                // these are manually handled above, so break;
-                case 'class':
-                    break;
-                case 'style':
-                    attributes[d.name] = Object(_helpers__WEBPACK_IMPORTED_MODULE_1__["styleToObject"])(d.value);
-                    break;
-                case 'checked':
-                case 'disabled':
-                case 'selected':
-                case 'autoplay':
-                case 'controls':
-                    attributes[d.name] = d.name;
-                    break;
-                default:
-                    attributes[_helpers__WEBPACK_IMPORTED_MODULE_1__["possibleStandardNames"][d.name] || d.name] = d.value;
-            }
-        });
-    }
-    return attributes;
-}
-function parseChildren(childNodeList, level, options) {
-    var children = __spread(childNodeList).map(function (node, index) {
-        return convertFromNode(node, __assign(__assign({}, options), { index: index, level: level + 1 }));
-    })
-        .filter(Boolean);
-    if (!children.length) {
-        return null;
-    }
-    return children;
-}
-function parseName(nodeName) {
-    if (/[a-z]+[A-Z]+[a-z]+/.test(nodeName)) {
-        return nodeName;
-    }
-    return nodeName.toLowerCase();
-}
-function convertFromNode(input, options) {
-    if (options === void 0) { options = {}; }
-    if (!input || !(input instanceof Node)) {
-        return null;
-    }
-    var _a = options.actions, actions = _a === void 0 ? [] : _a, _b = options.index, index = _b === void 0 ? 0 : _b, _c = options.level, level = _c === void 0 ? 0 : _c;
-    var node = input;
-    var key = level + "-" + index;
-    var result = [];
-    /* istanbul ignore else */
-    if (Array.isArray(actions)) {
-        actions.forEach(function (action) {
-            if (action.condition(node, key, level)) {
-                if (typeof action.pre === 'function') {
-                    node = action.pre(node, key, level);
-                    if (!(node instanceof Node)) {
-                        node = input;
-                        /* istanbul ignore else */
-                        if (true) {
-                            // eslint-disable-next-line no-console
-                            console.warn('The `pre`-method always must return a valid DomNode (instanceof Node) - your modification will be ignored (Hint: if you want to render a React-component, use the `action`-method instead)');
-                        }
-                    }
-                }
-                if (typeof action.post === 'function') {
-                    result.push(action.post(node, key, level));
-                }
-            }
-        });
-    }
-    if (result.length) {
-        return result;
-    }
-    switch (node.nodeType) {
-        case 1: {
-            // regular dom-node
-            return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](parseName(node.nodeName), parseAttributes(node, key), parseChildren(node.childNodes, level, options));
-        }
-        case 3: {
-            // textnode
-            var nodeText = node.nodeValue.toString();
-            /* istanbul ignore else */
-            if (/^\s+$/.test(nodeText)) {
-                return null;
-            }
-            /* istanbul ignore next */
-            if (!node.parentNode) {
-                return nodeText;
-            }
-            var parentNodeName = node.parentNode.nodeName.toLowerCase();
-            if (_helpers__WEBPACK_IMPORTED_MODULE_1__["noTextChildNodes"].indexOf(parentNodeName) !== -1) {
-                /* istanbul ignore else */
-                if (/\S/.test(nodeText)) {
-                    // eslint-disable-next-line no-console
-                    console.warn("A textNode is not allowed inside '" + parentNodeName + "'. Your text \"" + nodeText + "\" will be ignored");
-                }
-                return null;
-            }
-            return nodeText;
-        }
-        case 8: {
-            // html-comment
-            return null;
-        }
-        /* istanbul ignore next */
-        default: {
-            return null;
-        }
-    }
-}
-function convertFromString(input, options) {
-    if (options === void 0) { options = {}; }
-    if (!input || typeof input !== 'string') {
-        return null;
-    }
-    var _a = options.nodeOnly, nodeOnly = _a === void 0 ? false : _a, _b = options.selector, selector = _b === void 0 ? 'body > *' : _b, _c = options.type, type = _c === void 0 ? 'text/html' : _c;
-    try {
-        var parser = new DOMParser();
-        var doc = parser.parseFromString(input, type);
-        var node = doc.querySelector(selector);
-        if (!(node instanceof Node)) {
-            throw new Error('Error parsing input');
-        }
-        if (nodeOnly) {
-            return node;
-        }
-        return convertFromNode(node, options);
-    }
-    catch (error) {
-        /* istanbul ignore else */
-        if (true) {
-            // eslint-disable-next-line no-console
-            console.error(error);
-        }
-    }
-    return null;
-}
-function convert(input, options) {
-    if (options === void 0) { options = {}; }
-    if (typeof input === 'string') {
-        return convertFromString(input, options);
-    }
-    if (input instanceof Node) {
-        return convertFromNode(input, options);
-    }
-    return null;
-}
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ "../node_modules/react-inlinesvg/lib/helpers.js":
-/*!******************************************************!*\
-  !*** ../node_modules/react-inlinesvg/lib/helpers.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var exenv_1 = __webpack_require__(/*! exenv */ "../node_modules/exenv/index.js");
-exports.canUseDOM = function () { return exenv_1.canUseDOM; };
-exports.supportsInlineSVG = function () {
-    /* istanbul ignore next */
-    if (!document) {
-        return false;
-    }
-    var div = document.createElement('div');
-    div.innerHTML = '<svg />';
-    return div.firstChild && div.firstChild.namespaceURI === 'http://www.w3.org/2000/svg';
-};
-// tslint:disable-next-line:no-shadowed-variable
-var InlineSVGError = /** @class */ (function (_super) {
-    __extends(InlineSVGError, _super);
-    function InlineSVGError(message, data) {
-        var _this = _super.call(this) || this;
-        _this.name = 'InlineSVGError';
-        _this.message = message;
-        _this.data = data;
-        return _this;
-    }
-    return InlineSVGError;
-}(Error));
-exports.InlineSVGError = InlineSVGError;
-exports.isSupportedEnvironment = function () {
-    return exports.supportsInlineSVG() && typeof window !== 'undefined' && window !== null;
-};
-exports.randomString = function (length) {
-    var letters = 'abcdefghijklmnopqrstuvwxyz';
-    var numbers = '1234567890';
-    var charset = "" + letters + letters.toUpperCase() + numbers;
-    var randomCharacter = function (character) {
-        return character[Math.floor(Math.random() * character.length)];
-    };
-    var R = '';
-    for (var i = 0; i < length; i++) {
-        R += randomCharacter(charset);
-    }
-    return R;
-};
-//# sourceMappingURL=helpers.js.map
-
-/***/ }),
-
-/***/ "../node_modules/react-inlinesvg/lib/index.js":
-/*!****************************************************!*\
-  !*** ../node_modules/react-inlinesvg/lib/index.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-var __read = (this && this.__read) || function (o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-    }
-    catch (error) { e = { error: error }; }
-    finally {
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        }
-        finally { if (e) throw e.error; }
-    }
-    return ar;
-};
-var __spread = (this && this.__spread) || function () {
-    for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
-    return ar;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var React = __webpack_require__(/*! react */ "react");
-var react_from_dom_1 = __webpack_require__(/*! react-from-dom */ "../node_modules/react-from-dom/esm/index.js");
-var helpers_1 = __webpack_require__(/*! ./helpers */ "../node_modules/react-inlinesvg/lib/helpers.js");
-exports.STATUS = {
-    FAILED: 'failed',
-    LOADED: 'loaded',
-    LOADING: 'loading',
-    PENDING: 'pending',
-    READY: 'ready',
-    UNSUPPORTED: 'unsupported',
-};
-var cacheStore = Object.create(null);
-var InlineSVG = /** @class */ (function (_super) {
-    __extends(InlineSVG, _super);
-    function InlineSVG(props) {
-        var _this = _super.call(this, props) || this;
-        // tslint:disable-next-line:variable-name
-        _this._isMounted = false;
-        _this.handleLoad = function (content) {
-            /* istanbul ignore else */
-            if (_this._isMounted) {
-                _this.setState({
-                    content: content,
-                    status: exports.STATUS.LOADED,
-                }, _this.getElement);
-            }
-        };
-        _this.handleError = function (error) {
-            var onError = _this.props.onError;
-            var status = error.message === 'Browser does not support SVG' ? exports.STATUS.UNSUPPORTED : exports.STATUS.FAILED;
-            /* istanbul ignore else */
-            if (true) {
-                // tslint:disable-next-line:no-console
-                console.error(error);
-            }
-            /* istanbul ignore else */
-            if (_this._isMounted) {
-                _this.setState({ status: status }, function () {
-                    /* istanbul ignore else */
-                    if (typeof onError === 'function') {
-                        onError(error);
-                    }
-                });
-            }
-        };
-        _this.request = function () {
-            var _a = _this.props, cacheRequests = _a.cacheRequests, src = _a.src;
-            try {
-                if (cacheRequests) {
-                    cacheStore[src] = { content: '', status: exports.STATUS.LOADING, queue: [] };
-                }
-                return fetch(src)
-                    .then(function (response) {
-                    var contentType = response.headers.get('content-type');
-                    var _a = __read((contentType || '').split(/ ?; ?/), 1), fileType = _a[0];
-                    if (response.status > 299) {
-                        throw new helpers_1.InlineSVGError('Not Found');
-                    }
-                    if (!['image/svg+xml', 'text/plain'].some(function (d) { return fileType.indexOf(d) >= 0; })) {
-                        throw new helpers_1.InlineSVGError("Content type isn't valid: " + fileType);
-                    }
-                    return response.text();
-                })
-                    .then(function (content) {
-                    _this.handleLoad(content);
-                    /* istanbul ignore else */
-                    if (cacheRequests) {
-                        var cache = cacheStore[src];
-                        /* istanbul ignore else */
-                        if (cache) {
-                            cache.content = content;
-                            cache.status = exports.STATUS.LOADED;
-                            cache.queue = cache.queue.filter(function (cb) {
-                                cb(content);
-                                return false;
-                            });
-                        }
-                    }
-                })
-                    .catch(function (error) {
-                    /* istanbul ignore else */
-                    if (cacheRequests) {
-                        delete cacheStore[src];
-                    }
-                    _this.handleError(error);
-                });
-            }
-            catch (error) {
-                _this.handleError(new helpers_1.InlineSVGError(error.message));
-            }
-        };
-        _this.state = {
-            content: '',
-            element: null,
-            hasCache: !!props.cacheRequests && !!cacheStore[props.src],
-            status: exports.STATUS.PENDING,
-        };
-        _this.hash = props.uniqueHash || helpers_1.randomString(8);
-        return _this;
-    }
-    InlineSVG.prototype.componentDidMount = function () {
-        this._isMounted = true;
-        if (!helpers_1.canUseDOM()) {
-            this.handleError(new helpers_1.InlineSVGError('No DOM'));
-            return;
-        }
-        var status = this.state.status;
-        var src = this.props.src;
-        try {
-            /* istanbul ignore else */
-            if (status === exports.STATUS.PENDING) {
-                /* istanbul ignore else */
-                if (!helpers_1.isSupportedEnvironment()) {
-                    throw new helpers_1.InlineSVGError('Browser does not support SVG');
-                }
-                /* istanbul ignore else */
-                if (!src) {
-                    throw new helpers_1.InlineSVGError('Missing src');
-                }
-                this.load();
-            }
-        }
-        catch (error) {
-            this.handleError(error);
-        }
-    };
-    InlineSVG.prototype.componentDidUpdate = function (prevProps, prevState) {
-        if (!helpers_1.canUseDOM()) {
-            return;
-        }
-        var _a = this.state, hasCache = _a.hasCache, status = _a.status;
-        var _b = this.props, onLoad = _b.onLoad, src = _b.src;
-        if (prevState.status !== exports.STATUS.READY && status === exports.STATUS.READY) {
-            /* istanbul ignore else */
-            if (onLoad) {
-                onLoad(src, hasCache);
-            }
-        }
-        if (prevProps.src !== src) {
-            if (!src) {
-                this.handleError(new helpers_1.InlineSVGError('Missing src'));
-                return;
-            }
-            this.load();
-        }
-    };
-    InlineSVG.prototype.componentWillUnmount = function () {
-        this._isMounted = false;
-    };
-    InlineSVG.prototype.processSVG = function () {
-        var content = this.state.content;
-        var preProcessor = this.props.preProcessor;
-        if (preProcessor) {
-            return preProcessor(content);
-        }
-        return content;
-    };
-    InlineSVG.prototype.updateSVGAttributes = function (node) {
-        var _this = this;
-        var _a = this.props, _b = _a.baseURL, baseURL = _b === void 0 ? '' : _b, uniquifyIDs = _a.uniquifyIDs;
-        var replaceableAttributes = ['id', 'href', 'xlink:href', 'xlink:role', 'xlink:arcrole'];
-        var linkAttributes = ['href', 'xlink:href'];
-        var isDataValue = function (name, value) {
-            return linkAttributes.indexOf(name) >= 0 && (value ? value.indexOf('#') < 0 : false);
-        };
-        if (!uniquifyIDs) {
-            return node;
-        }
-        __spread(node.children).map(function (d) {
-            if (d.attributes && d.attributes.length) {
-                var attributes_1 = Object.values(d.attributes);
-                attributes_1.forEach(function (a) {
-                    var match = a.value.match(/url\((.*?)\)/);
-                    if (match && match[1]) {
-                        a.value = a.value.replace(match[0], "url(" + baseURL + match[1] + "__" + _this.hash + ")");
-                    }
-                });
-                replaceableAttributes.forEach(function (r) {
-                    var attribute = attributes_1.find(function (a) { return a.name === r; });
-                    if (attribute && !isDataValue(r, attribute.value)) {
-                        attribute.value = attribute.value + "__" + _this.hash;
-                    }
-                });
-            }
-            if (d.children.length) {
-                d = _this.updateSVGAttributes(d);
-            }
-            return d;
-        });
-        return node;
-    };
-    InlineSVG.prototype.getNode = function () {
-        var _a = this.props, description = _a.description, title = _a.title;
-        try {
-            var svgText = this.processSVG();
-            var node = react_from_dom_1.default(svgText, { nodeOnly: true });
-            if (!node || !(node instanceof SVGSVGElement)) {
-                throw new helpers_1.InlineSVGError('Could not convert the src to a DOM Node');
-            }
-            var svg = this.updateSVGAttributes(node);
-            if (description) {
-                var originalDesc = svg.querySelector('desc');
-                if (originalDesc && originalDesc.parentNode) {
-                    originalDesc.parentNode.removeChild(originalDesc);
-                }
-                var descElement = document.createElement('desc');
-                descElement.innerHTML = description;
-                svg.prepend(descElement);
-            }
-            if (title) {
-                var originalTitle = svg.querySelector('title');
-                if (originalTitle && originalTitle.parentNode) {
-                    originalTitle.parentNode.removeChild(originalTitle);
-                }
-                var titleElement = document.createElement('title');
-                titleElement.innerHTML = title;
-                svg.prepend(titleElement);
-            }
-            return svg;
-        }
-        catch (error) {
-            this.handleError(error);
-        }
-    };
-    InlineSVG.prototype.getElement = function () {
-        try {
-            var node = this.getNode();
-            var element = react_from_dom_1.default(node);
-            if (!element || !React.isValidElement(element)) {
-                throw new helpers_1.InlineSVGError('Could not convert the src to a React element');
-            }
-            this.setState({
-                element: element,
-                status: exports.STATUS.READY,
-            });
-        }
-        catch (error) {
-            this.handleError(new helpers_1.InlineSVGError(error.message));
-        }
-    };
-    InlineSVG.prototype.load = function () {
-        var _this = this;
-        /* istanbul ignore else */
-        if (this._isMounted) {
-            this.setState({
-                content: '',
-                element: null,
-                status: exports.STATUS.LOADING,
-            }, function () {
-                var _a = _this.props, cacheRequests = _a.cacheRequests, src = _a.src;
-                var cache = cacheRequests && cacheStore[src];
-                if (cache) {
-                    /* istanbul ignore else */
-                    if (cache.status === exports.STATUS.LOADING) {
-                        cache.queue.push(_this.handleLoad);
-                    }
-                    else if (cache.status === exports.STATUS.LOADED) {
-                        _this.handleLoad(cache.content);
-                    }
-                    return;
-                }
-                var dataURI = src.match(/data:image\/svg[^,]*?(;base64)?,(.*)/);
-                var inlineSrc;
-                if (dataURI) {
-                    inlineSrc = dataURI[1] ? atob(dataURI[2]) : decodeURIComponent(dataURI[2]);
-                }
-                else if (src.indexOf('<svg') >= 0) {
-                    inlineSrc = src;
-                }
-                if (inlineSrc) {
-                    _this.handleLoad(inlineSrc);
-                    return;
-                }
-                _this.request();
-            });
-        }
-    };
-    InlineSVG.prototype.render = function () {
-        if (!helpers_1.canUseDOM()) {
-            return null;
-        }
-        var _a = this.state, element = _a.element, status = _a.status;
-        var _b = this.props, baseURL = _b.baseURL, cacheRequests = _b.cacheRequests, _c = _b.children, children = _c === void 0 ? null : _c, description = _b.description, innerRef = _b.innerRef, _d = _b.loader, loader = _d === void 0 ? null : _d, onError = _b.onError, onLoad = _b.onLoad, preProcessor = _b.preProcessor, src = _b.src, title = _b.title, uniqueHash = _b.uniqueHash, uniquifyIDs = _b.uniquifyIDs, rest = __rest(_b, ["baseURL", "cacheRequests", "children", "description", "innerRef", "loader", "onError", "onLoad", "preProcessor", "src", "title", "uniqueHash", "uniquifyIDs"]);
-        if (element) {
-            return React.cloneElement(element, __assign({ ref: innerRef }, rest));
-        }
-        if ([exports.STATUS.UNSUPPORTED, exports.STATUS.FAILED].indexOf(status) > -1) {
-            return children;
-        }
-        return loader;
-    };
-    InlineSVG.defaultProps = {
-        cacheRequests: true,
-        uniquifyIDs: false,
-    };
-    return InlineSVG;
-}(React.PureComponent));
-exports.default = InlineSVG;
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
 /***/ "../node_modules/style-loader/lib/addStyles.js":
 /*!*****************************************************!*\
   !*** ../node_modules/style-loader/lib/addStyles.js ***!
@@ -64694,23 +63610,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ol/format/GeoJSON */ "../node_modules/ol/format/GeoJSON.js");
 /* harmony import */ var ol_proj__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ol/proj */ "../node_modules/ol/proj.js");
 /* harmony import */ var ol_events_condition__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ol/events/condition */ "../node_modules/ol/events/condition.js");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @grafana/ui */ "@grafana/ui");
-/* harmony import */ var _grafana_ui__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_grafana_ui__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var nanoid__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! nanoid */ "../node_modules/nanoid/index.browser.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! axios */ "../node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _img_undo_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./img/undo.svg */ "./img/undo.svg");
-/* harmony import */ var _img_undo_svg__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_img_undo_svg__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var react_inlinesvg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-inlinesvg */ "../node_modules/react-inlinesvg/lib/index.js");
-/* harmony import */ var react_inlinesvg__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_inlinesvg__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _img_done_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./img/done.svg */ "./img/done.svg");
-/* harmony import */ var _img_done_svg__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_img_done_svg__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _img_delete_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./img/delete.svg */ "./img/delete.svg");
-/* harmony import */ var _img_delete_svg__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_img_delete_svg__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var ol_ol_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ol/ol.css */ "../node_modules/ol/ol.css");
-/* harmony import */ var ol_ol_css__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(ol_ol_css__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./styles/main.css */ "./styles/main.css");
-/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_styles_main_css__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var nanoid__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! nanoid */ "../node_modules/nanoid/index.browser.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "../node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _stepper_Stepper__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./stepper/Stepper */ "./stepper/Stepper.tsx");
+/* harmony import */ var ol_ol_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ol/ol.css */ "../node_modules/ol/ol.css");
+/* harmony import */ var ol_ol_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(ol_ol_css__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./styles/main.css */ "./styles/main.css");
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_styles_main_css__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -64724,15 +63631,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import clientAPI from './utils/API';
 
 
 
-
- // import Stepper from './stepper/Stepper';
-
-
- // const stepsArray = ['Placing AP & POI', 'Creating Label', 'Send to Server'];
+var stepsArray = ['Place Access Point', 'Place Area of Interest', 'Select Feature to enter Property', 'Send to Server'];
 
 var MainPanel =
 /** @class */
@@ -64748,30 +63650,6 @@ function (_super) {
       lastFeature && _this.drawLayer.getSource().removeFeature(lastFeature);
     };
 
-    _this.handleSave = function () {
-      var features = _this.drawLayer.getSource().getFeatures();
-
-      var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_7__["default"]({
-        featureProjection: 'EPSG:4326'
-      });
-
-      if (features.length > 0) {
-        var geoJSON = JSON.parse(format.writeFeatures(features));
-        axios__WEBPACK_IMPORTED_MODULE_12___default.a.post('http://158.177.187.158:5000/upload-json', {
-          data: geoJSON
-        }).then(function (res) {
-          return console.log(res);
-        })["catch"](function (err) {
-          return console.log(err);
-        });
-        /*       clientAPI
-          .post('/upload-json', { geoJSON: geoJSON })
-          .then(res => console.log(res))
-          .catch(err => console.log(err)); */
-        // this.props.onOptionsChange({ ...this.props.options, geoJSON });
-      }
-    };
-
     _this.handleDelete = function () {
       if (_this.state.selectedFeature) {
         _this.drawLayer.getSource().removeFeature(_this.state.selectedFeature);
@@ -64783,14 +63661,6 @@ function (_super) {
           });
         });
       }
-    };
-
-    _this.handleDropDown = function (e) {
-      _this.setState({
-        drawOption: e.target.value
-      }, function () {
-        return _this.addInteractions();
-      });
     };
 
     _this.handleLabelInput = function (e) {
@@ -64805,75 +63675,70 @@ function (_super) {
       });
     };
 
-    _this.handleLabelSubmit = function (e) {
-      e.preventDefault();
-      var _a = _this.state,
-          selectedFeature = _a.selectedFeature,
-          propKey = _a.propKey,
-          propValue = _a.propValue;
+    _this.onKeyPress = function (e) {
+      if (e.which === 13) {
+        var _a = _this.state,
+            selectedFeature = _a.selectedFeature,
+            propKey = _a.propKey,
+            propValue = _a.propValue;
 
-      if (selectedFeature && propKey) {
-        var propKeyFromFeature = selectedFeature.getKeys().find(function (el) {
-          return el !== 'geometry';
-        });
+        if (selectedFeature && propKey) {
+          var propKeyFromFeature = selectedFeature.getKeys().find(function (el) {
+            return el !== 'geometry';
+          });
 
-        if (propKeyFromFeature) {
-          selectedFeature.unset(propKeyFromFeature);
-          selectedFeature.set(propKey, propValue);
-        } else {
-          selectedFeature.set(propKey, propValue);
-        }
+          if (propKeyFromFeature) {
+            selectedFeature.unset(propKeyFromFeature);
+            selectedFeature.set(propKey, propValue);
+          } else {
+            selectedFeature.set(propKey, propValue);
+          }
 
-        selectedFeature.setStyle(new ol_style__WEBPACK_IMPORTED_MODULE_6__["Style"]({
-          fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
-            color: 'rgba(255, 255, 255, 0.2)'
-          }),
-          stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
-            color: '#ffcc33',
-            width: 2
-          }),
-          image: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Circle"]({
-            radius: 7,
+          selectedFeature.setStyle(new ol_style__WEBPACK_IMPORTED_MODULE_6__["Style"]({
             fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
-              color: '#ffcc33'
-            })
-          }),
-          text: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Text"]({
+              color: 'rgba(255, 255, 255, 0.2)'
+            }),
             stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
-              color: '#fff',
+              color: '#ffcc33',
               width: 2
             }),
-            font: '14px Calibri,sans-serif',
-            text: propKey + " " + propValue,
-            offsetY: -10
-          })
-        }));
-      } // selectedFeature && selectedFeature.set('label', propKey);
-
+            image: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Circle"]({
+              radius: 7,
+              fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
+                color: '#ffcc33'
+              })
+            }),
+            text: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Text"]({
+              stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
+                color: '#fff',
+                width: 2
+              }),
+              font: '14px Calibri,sans-serif',
+              text: propKey + " " + propValue,
+              offsetY: -10
+            })
+          }));
+        }
+      }
     };
 
-    _this.handleSwitchMode = function () {
-      if (_this.state.editMode) {
-        _this.draw.setActive(true);
+    _this.handleSave = function () {
+      var features = _this.drawLayer.getSource().getFeatures();
 
-        _this.snap.setActive(true);
-
-        _this.modify.setActive(true);
-
-        _this.select.setActive(false);
-      } else {
-        _this.draw.setActive(false);
-
-        _this.snap.setActive(false);
-
-        _this.modify.setActive(false);
-
-        _this.select.setActive(true);
-      }
-
-      _this.setState({
-        editMode: !_this.state.editMode
+      var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_7__["default"]({
+        featureProjection: 'EPSG:4326'
       });
+
+      if (features.length > 0) {
+        var geoJSON = JSON.parse(format.writeFeatures(features));
+        axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://158.177.187.158:5000/upload-json', {
+          data: geoJSON
+        }).then(function (res) {
+          return console.log(res);
+        })["catch"](function (err) {
+          return console.log(err);
+        });
+      }
     };
 
     _this.addInteractions = function () {
@@ -64898,7 +63763,7 @@ function (_super) {
       _this.map.addInteraction(_this.snap);
     };
 
-    _this.id = 'id' + Object(nanoid__WEBPACK_IMPORTED_MODULE_11__["nanoid"])();
+    _this.id = 'id' + Object(nanoid__WEBPACK_IMPORTED_MODULE_10__["nanoid"])();
     _this.state = {
       drawOption: 'Point',
       editMode: false,
@@ -64960,22 +63825,6 @@ function (_super) {
           })
         });
       },
-
-      /* new Style({
-        fill: new Fill({
-          color: 'rgba(255, 255, 255, 0.2)',
-        }),
-        stroke: new Stroke({
-          color: '#ffcc33',
-          width: 2,
-        }),
-        image: new CircleStyle({
-          radius: 7,
-          fill: new Fill({
-            color: '#ffcc33',
-          }),
-        }),
-      }), */
       zIndex: 2
     });
     this.map = new ol__WEBPACK_IMPORTED_MODULE_2__["Map"]({
@@ -65018,8 +63867,6 @@ function (_super) {
       var selectedFeature = e.target.getFeatures().item(0);
 
       if (selectedFeature) {
-        // const label = selectedFeature.get('label') || '';
-        // this.setState(prevState => ({ ...prevState, selectedFeature, propKey: label }));
         var propKey_1 = selectedFeature.getKeys().find(function (el) {
           return el !== 'geometry';
         });
@@ -65043,9 +63890,6 @@ function (_super) {
             });
           });
         }
-        /* const format = new GeoJSON({ featureProjection: 'EPSG:4326' });
-                  selectedFeature && console.log('selecting...', format.writeFeature(selectedFeature)); */
-
       } else {
         _this.setState(function (prevState) {
           return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prevState), {
@@ -65061,33 +63905,11 @@ function (_super) {
     });
     this.map.addInteraction(this.modify);
     this.addInteractions();
-    /*     modify = new Modify({ source: source });
-    this.map.addInteraction(modify);
-          draw = new Draw({
-      source: source,
-      type: GeometryType.POLYGON,
-    });
-    this.map.addInteraction(draw);
-    snap = new Snap({ source: source });
-    this.map.addInteraction(snap); */
-
-    /*     draw.on('drawend', e => {
-      console.log('draw end');
-      const geom = e.feature.getGeometry();
-      const format = new GeoJSON({ });
-      const feature = new Feature({
-        geometry: geom,
-      });
-      const obj = format.writeFeature(feature);
-      console.log(obj);
-    });
-          modify.on('modifyend', e => {
-      console.log('modify end');
-      console.log(e.features.item(0).getGeometry());
-    }); */
   };
 
   MainPanel.prototype.componentDidUpdate = function (prevProps, prevState) {
+    var _this = this;
+
     if (prevProps.options.tile_url !== this.props.options.tile_url) {
       if (this.randomTile) {
         this.map.removeLayer(this.randomTile);
@@ -65120,124 +63942,142 @@ function (_super) {
         this.addInteractions();
       }
     }
-    /*     if (prevState.editMode !== this.state.editMode) {
-      if (!this.state.editMode && this.props.options.geoJSON) {
-        const vectorSource = new VectorSource({
-          features: new GeoJSON().readFeatures(this.props.options.geoJSON as object),
-        });
-        this.geoLayer = new VectorLayer({
-          source: vectorSource,
-          style: new Style({
-            fill: new Fill({
-              color: 'rgba(255, 255, 255, 0.2)',
-            }),
-            stroke: new Stroke({
-              color: '#ffcc33',
-              width: 2,
-            }),
-            image: new CircleStyle({
-              radius: 7,
-              fill: new Fill({
-                color: '#ffcc33',
-              }),
-            }),
-          }),
-          zIndex: 2,
-        });
-              this.map.addLayer(this.geoLayer);
-      }
-    } */
 
+    if (prevState.currentStep !== this.state.currentStep) {
+      switch (this.state.currentStep) {
+        case 1:
+          this.setState({
+            drawOption: 'Point'
+          }, function () {
+            return _this.addInteractions();
+          });
+          break;
+
+        case 2:
+          if (prevState.currentStep === 1) {
+            this.setState({
+              drawOption: 'Polygon'
+            }, function () {
+              return _this.addInteractions();
+            });
+          } else {
+            this.draw.setActive(true);
+            this.snap.setActive(true);
+            this.modify.setActive(true);
+            this.select.setActive(false);
+          }
+
+          break;
+
+        case 3:
+          if (prevState.currentStep === 2) {
+            this.draw.setActive(false);
+            this.snap.setActive(false);
+            this.modify.setActive(false);
+            this.select.setActive(true);
+          }
+
+          break;
+
+        case 4:
+          var features = this.drawLayer.getSource().getFeatures();
+          var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_7__["default"]({
+            featureProjection: 'EPSG:4326'
+          });
+
+          if (features.length > 0) {
+            var geoJSON = JSON.parse(format.writeFeatures(features));
+            axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://158.177.187.158:5000/upload-json', {
+              data: geoJSON
+            }).then(function (res) {
+              return console.log(res);
+            })["catch"](function (err) {
+              return console.log(err);
+            });
+          }
+
+          break;
+      }
+    }
+  };
+
+  MainPanel.prototype.handleClick = function (clickType) {
+    var currentStep = this.state.currentStep;
+    var newStep = currentStep;
+    clickType === 'next' ? newStep++ : newStep--;
+
+    if (newStep > 0 && newStep <= 5) {
+      this.setState({
+        currentStep: newStep
+      });
+    }
   };
 
   MainPanel.prototype.render = function () {
+    var _this = this;
+
     var _a = this.props,
         width = _a.width,
         height = _a.height;
     var _b = this.state,
-        drawOption = _b.drawOption,
-        editMode = _b.editMode,
         propKey = _b.propKey,
         propValue = _b.propValue,
-        selectedFeature = _b.selectedFeature
-    /* , currentStep */
-    ;
+        selectedFeature = _b.selectedFeature,
+        currentStep = _b.currentStep;
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       style: {
         width: width,
         height: height
+      },
+      className: "grid-area-wrapper"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      id: this.id,
+      className: "inner-area"
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "stepper-container-vertical "
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      style: {
+        textAlign: 'center'
       }
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "flex-row space-between"
-    }, !editMode ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "flex-row"
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
-      onChange: this.handleDropDown,
-      value: drawOption
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
-      value: "Point"
-    }, "Access Point Location"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
-      value: "Polygon"
-    }, "Polygon of Interest")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_inlinesvg__WEBPACK_IMPORTED_MODULE_14___default.a, {
-      src: _img_undo_svg__WEBPACK_IMPORTED_MODULE_13___default.a,
-      onClick: this.handleUndo,
-      className: "img-button"
-    })) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "flex-row"
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_inlinesvg__WEBPACK_IMPORTED_MODULE_14___default.a, {
-      src: _img_done_svg__WEBPACK_IMPORTED_MODULE_15___default.a,
-      onClick: this.handleSave,
-      className: "img-button"
-    }), selectedFeature && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_inlinesvg__WEBPACK_IMPORTED_MODULE_14___default.a, {
-      src: _img_delete_svg__WEBPACK_IMPORTED_MODULE_16___default.a,
-      onClick: this.handleDelete,
-      className: "img-button"
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
-      onSubmit: this.handleLabelSubmit
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "flex-row"
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_grafana_ui__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
-      label: "Key",
-      labelWidth: 3,
-      inputWidth: 5,
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Draw Tool \xA0"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      onClick: this.handleUndo
+    }, "Undo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      onClick: this.handleDelete
+    }, "Delete")), selectedFeature && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "input-fields"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
       type: "text",
+      className: "form__input",
+      id: "propKey",
+      placeholder: "Key",
       name: "propKey",
       value: propKey,
       onChange: this.handleLabelInput
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_grafana_ui__WEBPACK_IMPORTED_MODULE_10__["FormField"], {
-      label: "Value",
-      labelWidth: 4,
-      inputWidth: 5,
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
       type: "text",
+      className: "form__input",
+      id: "propValue",
+      placeholder: "Value",
       name: "propValue",
       value: propValue,
-      onChange: this.handleLabelInput
-    }), propKey && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-      className: "img-button",
-      type: "submit"
-    }, "Save"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "flex-row"
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
-      className: "text-mode"
-    }, editMode ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Setting Labels") : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Placing AP and POI")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "gf-form-switch",
-      style: {
-        border: '1px solid #d9d9d9',
-        borderRadius: '1px'
-      },
-      onClick: this.handleSwitchMode
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-      type: "checkbox",
-      checked: editMode
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-      className: "gf-form-switch__slider"
-    })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      id: this.id,
-      style: {
-        width: width,
-        height: height - 40
+      onChange: this.handleLabelInput,
+      onKeyPress: this.onKeyPress
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_stepper_Stepper__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      direction: "vertical",
+      currentStepNumber: currentStep - 1,
+      steps: stepsArray,
+      stepColor: "#ee5253"
+    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "buttons-container"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      onClick: function onClick() {
+        return _this.handleClick('');
       }
-    }));
+    }, "Previous"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      onClick: function onClick() {
+        return _this.handleClick('next');
+      }
+    }, "Next"))));
   };
 
   return MainPanel;
@@ -65245,39 +64085,6 @@ function (_super) {
 
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "../node_modules/process/browser.js")))
-
-/***/ }),
-
-/***/ "./img/delete.svg":
-/*!************************!*\
-  !*** ./img/delete.svg ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNNiAxOWMwIDEuMS45IDIgMiAyaDhjMS4xIDAgMi0uOSAyLTJWN0g2djEyek0xOSA0aC0zLjVsLTEtMWgtNWwtMSAxSDV2MmgxNFY0eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48L3N2Zz4="
-
-/***/ }),
-
-/***/ "./img/done.svg":
-/*!**********************!*\
-  !*** ./img/done.svg ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDBWMHoiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNMTkuNzcgNS4wM2wxLjQgMS40TDguNDMgMTkuMTdsLTUuNi01LjYgMS40LTEuNCA0LjIgNC4yTDE5Ljc3IDUuMDNtMC0yLjgzTDguNDMgMTMuNTRsLTQuMi00LjJMMCAxMy41NyA4LjQzIDIyIDI0IDYuNDMgMTkuNzcgMi4yeiIvPjwvc3ZnPg=="
-
-/***/ }),
-
-/***/ "./img/undo.svg":
-/*!**********************!*\
-  !*** ./img/undo.svg ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTEyLjUgOGMtMi42NSAwLTUuMDUuOTktNi45IDIuNkwyIDd2OWg5bC0zLjYyLTMuNjJjMS4zOS0xLjE2IDMuMTYtMS44OCA1LjEyLTEuODggMy41NCAwIDYuNTUgMi4zMSA3LjYgNS41bDIuMzctLjc4QzIxLjA4IDExLjAzIDE3LjE1IDggMTIuNSA4eiIvPjwvc3ZnPg=="
 
 /***/ }),
 
@@ -65302,6 +64109,173 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var plugin = new _grafana_ui__WEBPACK_IMPORTED_MODULE_0__["PanelPlugin"](_MainPanel__WEBPACK_IMPORTED_MODULE_2__["MainPanel"]).setDefaults(_types__WEBPACK_IMPORTED_MODULE_1__["defaults"]).setEditor(_MainEditor__WEBPACK_IMPORTED_MODULE_3__["MainEditor"]);
+
+/***/ }),
+
+/***/ "./stepper/Stepper.css":
+/*!*****************************!*\
+  !*** ./stepper/Stepper.css ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--8-1!../../node_modules/postcss-loader/src??ref--8-2!../../node_modules/sass-loader/lib/loader.js!./Stepper.css */ "../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/sass-loader/lib/loader.js!./stepper/Stepper.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "../node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./stepper/Stepper.tsx":
+/*!*****************************!*\
+  !*** ./stepper/Stepper.tsx ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Stepper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Stepper.css */ "./stepper/Stepper.css");
+/* harmony import */ var _Stepper_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Stepper_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var Stepper =
+/** @class */
+function (_super) {
+  Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(Stepper, _super);
+
+  function Stepper(props) {
+    var _this = _super.call(this, props) || this;
+
+    _this.state = {
+      // Completed - to add a check mark
+      // Selected - to fill step with color
+      // Highlighted - to make text of selected step bold
+      steps: []
+    };
+    return _this;
+  }
+
+  Stepper.prototype.componentDidMount = function () {
+    var _a = this.props,
+        steps = _a.steps,
+        currentStepNumber = _a.currentStepNumber;
+    var stepsState = steps.map(function (step, index) {
+      /* const stepObj = {};
+      stepObj.description = step;
+      stepObj.highlighted = index === 0 ? true : false;
+      stepObj.selected = index === 0 ? true : false;
+      stepObj.completed = false; */
+      //return stepObj;
+      return {
+        description: step,
+        highlighted: index === 0 ? true : false,
+        selected: index === 0 ? true : false,
+        completed: false
+      };
+    });
+    var currentSteps = this.updateStep(currentStepNumber, stepsState);
+    this.setState({
+      steps: currentSteps
+    });
+  };
+
+  Stepper.prototype.componentDidUpdate = function (prevProps) {
+    var steps = this.state.steps;
+    var currentSteps = this.updateStep(this.props.currentStepNumber, steps);
+    if (prevProps.currentStepNumber !== this.props.currentStepNumber) this.setState({
+      steps: currentSteps
+    });
+  };
+
+  Stepper.prototype.updateStep = function (stepNumber, steps) {
+    var newSteps = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__spread"])(steps);
+
+    var stepCounter = 0; // Completed - to add a check mark
+    // Selected - to fill step with color
+    // Highlighted - to make text of selected step bold
+
+    while (stepCounter < newSteps.length) {
+      // Current step
+      if (stepCounter === stepNumber) {
+        newSteps[stepCounter] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, newSteps[stepCounter]), {
+          highlighted: true,
+          selected: true,
+          completed: false
+        });
+        stepCounter++;
+      } // Past step
+      else if (stepCounter < stepNumber) {
+          newSteps[stepCounter] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, newSteps[stepCounter]), {
+            highlighted: false,
+            selected: true,
+            completed: true
+          });
+          stepCounter++;
+        } // Future step
+        else {
+            newSteps[stepCounter] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, newSteps[stepCounter]), {
+              highlighted: false,
+              selected: false,
+              completed: false
+            });
+            stepCounter++;
+          }
+    }
+
+    return newSteps;
+  };
+
+  Stepper.prototype.render = function () {
+    var _a = this.props,
+        direction = _a.direction,
+        stepColor = _a.stepColor;
+    var steps = this.state.steps;
+    var stepsJSX = steps.map(function (step, index) {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "step-wrapper",
+        key: index
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "step-number " + (step.selected ? 'step-number-selected' : 'step-number-disabled'),
+        style: {
+          background: "" + (step.selected ? stepColor : 'none')
+        }
+      }, step.completed ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "\u2713") : index + 1), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "step-description " + (step.highlighted && 'step-description-active')
+      }, step.description), index !== steps.length - 1 && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "divider-line divider-line-" + steps.length
+      }));
+    });
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "stepper-wrapper-" + direction
+    }, stepsJSX);
+  };
+
+  return Stepper;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Stepper);
 
 /***/ }),
 

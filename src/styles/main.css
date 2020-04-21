@@ -1,51 +1,3 @@
-.img-button {
-  height: 35px;
-  width: 35px;
-  border: 1px solid #d9d9d9;
-  border-radius: 2px;
-  padding: 2px;
-  cursor: pointer;
-}
-
-.img-button:active {
-  background-color: #e5e5e5;
-  box-shadow: 0 2px #7f7f7f;
-  transform: translateY(3px);
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-.option-dropdown {
-  height: 35px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.label-input {
-  height: 35px;
-  padding: 2px;
-  border: 1px solid #d9d9d9;
-}
-
-.text-mode {
-  display: flex;
-  height: 35px;
-  padding: 2px;
-  margin-right: 10px;
-}
-
-.text-mode p {
-  margin: auto;
-  text-align: center;
-}
-
 .grid-area-wrapper {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -74,16 +26,61 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
 }
 .buttons-container {
   text-align: center;
+  /* display: flex;
+  justify-content: space-around; */
 }
 .buttons-container button {
-  margin: 0 2rem;
+  margin: 0 2px;
   width: 100px;
   padding: 4px;
   background-color: lightsalmon;
   border: none;
+}
+
+.buttons-container button:active {
+  background-color: #ec3b3c;
+  box-shadow: 0 2px #7f7f7f;
+  transform: translateY(1px);
+}
+
+.input-fields {
+  text-align: center;
+}
+
+.form__label {
+  font-size: 1rem;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1rem;
+  /*   margin: 0 auto; */
+  margin-right: 5px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 40%;
+  /* display: block; */
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+  border: 1px solid #7f7f7f;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
 }
