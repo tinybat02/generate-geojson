@@ -42,6 +42,16 @@
   border: none;
 }
 
+.buttons-container .send-button {
+  background-color: #c71314;
+  color: #fff;
+}
+
+.buttons-container .disable-button {
+  background-color: #bfbfbf;
+  color: #000;
+}
+
 .buttons-container button:active {
   background-color: #ec3b3c;
   box-shadow: 0 2px #7f7f7f;
@@ -71,11 +81,12 @@
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
   border: none;
-  width: 40%;
+  /* width: 40%; */
   /* display: block; */
   border-bottom: 0.3rem solid transparent;
   transition: all 0.3s;
   border: 1px solid #7f7f7f;
+  width: 100%;
 }
 
 .form__input:placeholder-shown + .form__label {
@@ -83,4 +94,29 @@
   visibility: hidden;
   -webkit-transform: translateY(-4rem);
   transform: translateY(-4rem);
+}
+
+.bar {
+  padding: 10px;
+  margin: 10px;
+  color: #333;
+  background: #fafafa;
+  border: 1px solid #ccc;
+}
+
+.success {
+  color: #2b7515;
+  background: #ecffd6;
+  border: 1px solid #617c42;
+}
+.warn {
+  color: #756e15;
+  background: #fffbd1;
+  border: 1px solid #87803e;
+}
+
+.error {
+  color: #ba3939;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
 }

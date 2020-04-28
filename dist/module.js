@@ -1946,7 +1946,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 // Module
-exports.push([module.i, ".grid-area-wrapper {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 3fr 1fr;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center;\n  /* display: flex;\r\n  justify-content: space-around; */ }\n\n.buttons-container button {\n  margin: 0 2px;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n\n.buttons-container button:active {\n  background-color: #ec3b3c;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(1px); }\n\n.input-fields {\n  text-align: center; }\n\n.form__label {\n  font-size: 1rem;\n  margin-left: 2rem;\n  margin-top: 0.5rem;\n  display: block;\n  transition: all 0.3s;\n  transform: translateY(0rem); }\n\n.form__input {\n  font-family: 'Roboto', sans-serif;\n  color: #333;\n  font-size: 1rem;\n  /*   margin: 0 auto; */\n  margin-right: 5px;\n  padding: 0.5rem 1rem;\n  border-radius: 0.2rem;\n  background-color: white;\n  border: none;\n  width: 40%;\n  /* display: block; */\n  border-bottom: 0.3rem solid transparent;\n  transition: all 0.3s;\n  border: 1px solid #7f7f7f; }\n\n.form__input:placeholder-shown + .form__label {\n  opacity: 0;\n  visibility: hidden;\n  transform: translateY(-4rem); }\n", "",{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;EACE,iBAAa;EAAb,aAAa;EACb,yBAA8B;EAA9B,8BAA8B,EAAE;;AAElC;EACE,sBAAsB,EAAE;;AAE1B;EACE,6BAA6B;EAC7B,yBAAyB;EACzB,kBAAkB;EAClB,iBAAiB;EACjB,aAAa;EACb,UAAU,EAAE;;AAEd;EACE,sBAAsB;EACtB,+BAA+B;EAC/B,kBAAkB;EAClB,yBAAyB;EACzB,SAAS;EACT,aAAa;EACb,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,WAAW,EAAE;;AAEf;EACE,kBAAkB;EAClB;kCACgC,EAAE;;AAEpC;EACE,aAAa;EACb,YAAY;EACZ,YAAY;EACZ,6BAA6B;EAC7B,YAAY,EAAE;;AAEhB;EACE,yBAAyB;EACzB,yBAAyB;EACzB,0BAA0B,EAAE;;AAE9B;EACE,kBAAkB,EAAE;;AAEtB;EACE,eAAe;EACf,iBAAiB;EACjB,kBAAkB;EAClB,cAAc;EACd,oBAAoB;EACpB,2BAA2B,EAAE;;AAE/B;EACE,iCAAiC;EACjC,WAAW;EACX,eAAe;EACf,sBAAsB;EACtB,iBAAiB;EACjB,oBAAoB;EACpB,qBAAqB;EACrB,uBAAuB;EACvB,YAAY;EACZ,UAAU;EACV,oBAAoB;EACpB,uCAAuC;EACvC,oBAAoB;EACpB,yBAAyB,EAAE;;AAE7B;EACE,UAAU;EACV,kBAAkB;EAElB,4BAA4B,EAAE","file":"main.css","sourcesContent":[".grid-area-wrapper {\n  display: grid;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center;\n  /* display: flex;\r\n  justify-content: space-around; */ }\n\n.buttons-container button {\n  margin: 0 2px;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n\n.buttons-container button:active {\n  background-color: #ec3b3c;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(1px); }\n\n.input-fields {\n  text-align: center; }\n\n.form__label {\n  font-size: 1rem;\n  margin-left: 2rem;\n  margin-top: 0.5rem;\n  display: block;\n  transition: all 0.3s;\n  transform: translateY(0rem); }\n\n.form__input {\n  font-family: 'Roboto', sans-serif;\n  color: #333;\n  font-size: 1rem;\n  /*   margin: 0 auto; */\n  margin-right: 5px;\n  padding: 0.5rem 1rem;\n  border-radius: 0.2rem;\n  background-color: white;\n  border: none;\n  width: 40%;\n  /* display: block; */\n  border-bottom: 0.3rem solid transparent;\n  transition: all 0.3s;\n  border: 1px solid #7f7f7f; }\n\n.form__input:placeholder-shown + .form__label {\n  opacity: 0;\n  visibility: hidden;\n  -webkit-transform: translateY(-4rem);\n  transform: translateY(-4rem); }\n"]}]);
+exports.push([module.i, ".grid-area-wrapper {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 3fr 1fr;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center;\n  /* display: flex;\r\n  justify-content: space-around; */ }\n\n.buttons-container button {\n  margin: 0 2px;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n\n.buttons-container .send-button {\n  background-color: #c71314;\n  color: #fff; }\n\n.buttons-container .disable-button {\n  background-color: #bfbfbf;\n  color: #000; }\n\n.buttons-container button:active {\n  background-color: #ec3b3c;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(1px); }\n\n.input-fields {\n  text-align: center; }\n\n.form__label {\n  font-size: 1rem;\n  margin-left: 2rem;\n  margin-top: 0.5rem;\n  display: block;\n  transition: all 0.3s;\n  transform: translateY(0rem); }\n\n.form__input {\n  font-family: 'Roboto', sans-serif;\n  color: #333;\n  font-size: 1rem;\n  /*   margin: 0 auto; */\n  margin-right: 5px;\n  padding: 0.5rem 1rem;\n  border-radius: 0.2rem;\n  background-color: white;\n  border: none;\n  /* width: 40%; */\n  /* display: block; */\n  border-bottom: 0.3rem solid transparent;\n  transition: all 0.3s;\n  border: 1px solid #7f7f7f;\n  width: 100%; }\n\n.form__input:placeholder-shown + .form__label {\n  opacity: 0;\n  visibility: hidden;\n  transform: translateY(-4rem); }\n\n.bar {\n  padding: 10px;\n  margin: 10px;\n  color: #333;\n  background: #fafafa;\n  border: 1px solid #ccc; }\n\n.success {\n  color: #2b7515;\n  background: #ecffd6;\n  border: 1px solid #617c42; }\n\n.warn {\n  color: #756e15;\n  background: #fffbd1;\n  border: 1px solid #87803e; }\n\n.error {\n  color: #ba3939;\n  background: #ffe0e0;\n  border: 1px solid #a33a3a; }\n", "",{"version":3,"sources":["main.css"],"names":[],"mappings":"AAAA;EACE,iBAAa;EAAb,aAAa;EACb,yBAA8B;EAA9B,8BAA8B,EAAE;;AAElC;EACE,sBAAsB,EAAE;;AAE1B;EACE,6BAA6B;EAC7B,yBAAyB;EACzB,kBAAkB;EAClB,iBAAiB;EACjB,aAAa;EACb,UAAU,EAAE;;AAEd;EACE,sBAAsB;EACtB,+BAA+B;EAC/B,kBAAkB;EAClB,yBAAyB;EACzB,SAAS;EACT,aAAa;EACb,gBAAgB;EAChB,YAAY;EACZ,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,WAAW,EAAE;;AAEf;EACE,kBAAkB;EAClB;kCACgC,EAAE;;AAEpC;EACE,aAAa;EACb,YAAY;EACZ,YAAY;EACZ,6BAA6B;EAC7B,YAAY,EAAE;;AAEhB;EACE,yBAAyB;EACzB,WAAW,EAAE;;AAEf;EACE,yBAAyB;EACzB,WAAW,EAAE;;AAEf;EACE,yBAAyB;EACzB,yBAAyB;EACzB,0BAA0B,EAAE;;AAE9B;EACE,kBAAkB,EAAE;;AAEtB;EACE,eAAe;EACf,iBAAiB;EACjB,kBAAkB;EAClB,cAAc;EACd,oBAAoB;EACpB,2BAA2B,EAAE;;AAE/B;EACE,iCAAiC;EACjC,WAAW;EACX,eAAe;EACf,sBAAsB;EACtB,iBAAiB;EACjB,oBAAoB;EACpB,qBAAqB;EACrB,uBAAuB;EACvB,YAAY;EACZ,gBAAgB;EAChB,oBAAoB;EACpB,uCAAuC;EACvC,oBAAoB;EACpB,yBAAyB;EACzB,WAAW,EAAE;;AAEf;EACE,UAAU;EACV,kBAAkB;EAElB,4BAA4B,EAAE;;AAEhC;EACE,aAAa;EACb,YAAY;EACZ,WAAW;EACX,mBAAmB;EACnB,sBAAsB,EAAE;;AAE1B;EACE,cAAc;EACd,mBAAmB;EACnB,yBAAyB,EAAE;;AAE7B;EACE,cAAc;EACd,mBAAmB;EACnB,yBAAyB,EAAE;;AAE7B;EACE,cAAc;EACd,mBAAmB;EACnB,yBAAyB,EAAE","file":"main.css","sourcesContent":[".grid-area-wrapper {\n  display: grid;\n  grid-template-columns: 3fr 1fr; }\n\n.inner-area {\n  border: 1px solid #333; }\n\n.stepper-container-horizontal {\n  border: 1px solid lightsalmon;\n  box-shadow: 0 0 13px #333;\n  border-radius: 3px;\n  margin: 40px auto;\n  padding: 30px;\n  width: 60%; }\n\n.stepper-container-vertical {\n  border: 1px solid #333;\n  /* box-shadow: 0 0 13px #333; */\n  border-radius: 3px;\n  /*   margin: 40px auto; */\n  margin: 0;\n  padding: 30px;\n  /* width: 15%; */\n  height: auto;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  width: 100%; }\n\n.buttons-container {\n  text-align: center;\n  /* display: flex;\r\n  justify-content: space-around; */ }\n\n.buttons-container button {\n  margin: 0 2px;\n  width: 100px;\n  padding: 4px;\n  background-color: lightsalmon;\n  border: none; }\n\n.buttons-container .send-button {\n  background-color: #c71314;\n  color: #fff; }\n\n.buttons-container .disable-button {\n  background-color: #bfbfbf;\n  color: #000; }\n\n.buttons-container button:active {\n  background-color: #ec3b3c;\n  box-shadow: 0 2px #7f7f7f;\n  transform: translateY(1px); }\n\n.input-fields {\n  text-align: center; }\n\n.form__label {\n  font-size: 1rem;\n  margin-left: 2rem;\n  margin-top: 0.5rem;\n  display: block;\n  transition: all 0.3s;\n  transform: translateY(0rem); }\n\n.form__input {\n  font-family: 'Roboto', sans-serif;\n  color: #333;\n  font-size: 1rem;\n  /*   margin: 0 auto; */\n  margin-right: 5px;\n  padding: 0.5rem 1rem;\n  border-radius: 0.2rem;\n  background-color: white;\n  border: none;\n  /* width: 40%; */\n  /* display: block; */\n  border-bottom: 0.3rem solid transparent;\n  transition: all 0.3s;\n  border: 1px solid #7f7f7f;\n  width: 100%; }\n\n.form__input:placeholder-shown + .form__label {\n  opacity: 0;\n  visibility: hidden;\n  -webkit-transform: translateY(-4rem);\n  transform: translateY(-4rem); }\n\n.bar {\n  padding: 10px;\n  margin: 10px;\n  color: #333;\n  background: #fafafa;\n  border: 1px solid #ccc; }\n\n.success {\n  color: #2b7515;\n  background: #ecffd6;\n  border: 1px solid #617c42; }\n\n.warn {\n  color: #756e15;\n  background: #fffbd1;\n  border: 1px solid #87803e; }\n\n.error {\n  color: #ba3939;\n  background: #ffe0e0;\n  border: 1px solid #a33a3a; }\n"]}]);
 // Exports
 module.exports = exports;
 
@@ -63598,7 +63598,7 @@ var MainEditor = function MainEditor(_a) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainPanel", function() { return MainPanel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainPanel", function() { return MainPanel; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "../node_modules/tslib/tslib.es6.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -63634,7 +63634,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var stepsArray = ['Place Access Point', 'Place Area of Interest', 'Select Feature to enter Property', 'Send to Server'];
+var stepsArray = ['Place Access Point', 'Select Point to Enter ID', 'Place Area of Interest', 'Select polygon to Enter Name', 'Send to Server'];
 
 var MainPanel =
 /** @class */
@@ -63675,80 +63675,62 @@ function (_super) {
       });
     };
 
-    _this.onKeyPress = function (e) {
-      if (e.which === 13) {
-        var _a = _this.state,
-            selectedFeature = _a.selectedFeature,
-            propKey = _a.propKey,
-            propValue = _a.propValue;
+    _this.setFeatureProp = function (e) {
+      e.preventDefault();
+      var _a = _this.state,
+          selectedFeature = _a.selectedFeature,
+          propValue = _a.propValue,
+          drawOption = _a.drawOption;
 
-        if (selectedFeature && propKey) {
-          var propKeyFromFeature = selectedFeature.getKeys().find(function (el) {
-            return el !== 'geometry';
-          });
+      if (selectedFeature && propValue) {
+        if (drawOption == 'Point') {
+          selectedFeature.get('id') && selectedFeature.unset('id');
+          selectedFeature.set('id', propValue);
+        }
 
-          if (propKeyFromFeature) {
-            selectedFeature.unset(propKeyFromFeature);
-            selectedFeature.set(propKey, propValue);
-          } else {
-            selectedFeature.set(propKey, propValue);
-          }
+        if (drawOption == 'Polygon') {
+          selectedFeature.get('name') && selectedFeature.unset('name');
+          selectedFeature.set('name', propValue);
+        }
 
-          selectedFeature.setStyle(new ol_style__WEBPACK_IMPORTED_MODULE_6__["Style"]({
+        selectedFeature.setStyle(new ol_style__WEBPACK_IMPORTED_MODULE_6__["Style"]({
+          fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
+            color: 'rgba(255, 255, 255, 0.2)'
+          }),
+          stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
+            color: '#ffcc33',
+            width: 2
+          }),
+          image: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Circle"]({
+            radius: 7,
             fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
-              color: 'rgba(255, 255, 255, 0.2)'
-            }),
+              color: '#ffcc33'
+            })
+          }),
+          text: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Text"]({
             stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
-              color: '#ffcc33',
+              color: '#fff',
               width: 2
             }),
-            image: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Circle"]({
-              radius: 7,
-              fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
-                color: '#ffcc33'
-              })
-            }),
-            text: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Text"]({
-              stroke: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Stroke"]({
-                color: '#fff',
-                width: 2
-              }),
-              font: '14px Calibri,sans-serif',
-              text: propKey + " " + propValue,
-              offsetY: -10
-            })
-          }));
-        }
-      }
-    };
-
-    _this.handleSave = function () {
-      var features = _this.drawLayer.getSource().getFeatures();
-
-      var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_7__["default"]({
-        featureProjection: 'EPSG:4326'
-      });
-
-      if (features.length > 0) {
-        var geoJSON = JSON.parse(format.writeFeatures(features));
-        axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://158.177.187.158:5000/upload-json', {
-          data: geoJSON
-        }).then(function (res) {
-          return console.log(res);
-        })["catch"](function (err) {
-          return console.log(err);
-        });
+            font: '14px Calibri,sans-serif',
+            text: propValue,
+            offsetY: -12
+          })
+        }));
       }
     };
 
     _this.addInteractions = function () {
+      var drawOption = _this.state.drawOption;
+
       _this.map.removeInteraction(_this.draw);
 
       _this.map.removeInteraction(_this.snap);
 
+      _this.map.removeInteraction(_this.select);
+
       var sourceDrawLayer = _this.drawLayer.getSource();
 
-      var drawOption = _this.state.drawOption;
       _this.draw = new ol_interaction__WEBPACK_IMPORTED_MODULE_3__["Draw"]({
         source: sourceDrawLayer,
         type: drawOption
@@ -63763,43 +63745,91 @@ function (_super) {
       _this.map.addInteraction(_this.snap);
     };
 
+    _this.addSelectInteraction = function () {
+      var drawOption = _this.state.drawOption;
+      _this.select = new ol_interaction__WEBPACK_IMPORTED_MODULE_3__["Select"]({
+        condition: ol_events_condition__WEBPACK_IMPORTED_MODULE_9__["click"],
+        filter: function filter(feature) {
+          return feature.getGeometry().getType() == drawOption;
+        }
+      });
+
+      _this.map.addInteraction(_this.select);
+
+      _this.select.on('select', function (e) {
+        var selectedFeature = e.target.getFeatures().item(0);
+
+        if (selectedFeature) {
+          var propKey_1 = selectedFeature.getKeys().find(function (el) {
+            return el !== 'geometry';
+          });
+
+          if (propKey_1) {
+            var propValue_1 = selectedFeature.get(propKey_1);
+
+            _this.setState(function (prevState) {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prevState), {
+                selectedFeature: selectedFeature,
+                propKey: propKey_1,
+                propValue: propValue_1
+              });
+            });
+          } else {
+            _this.setState(function (prevState) {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prevState), {
+                selectedFeature: selectedFeature,
+                propKey: '',
+                propValue: ''
+              });
+            });
+          }
+        } else {
+          _this.setState(function (prevState) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prevState), {
+              selectedFeature: null,
+              propKey: '',
+              propValue: ''
+            });
+          });
+        }
+      });
+    };
+
     _this.id = 'id' + Object(nanoid__WEBPACK_IMPORTED_MODULE_10__["nanoid"])();
     _this.state = {
       drawOption: 'Point',
       editMode: false,
       selectedFeature: null,
-      propKey: '',
       propValue: '',
-      currentStep: 1
+      currentStep: 1,
+      errorType: '',
+      errorMessage: ''
     };
     return _this;
   }
 
   MainPanel.prototype.componentDidMount = function () {
-    var _this = this;
-
-    console.log('host', window.location.hostname);
-    console.log('process host', process.env.host);
+    // console.log('host', `${window.location.protocol}//${window.location.hostname}:5000/upload-json`);
     var _a = this.props.options,
         center_lat = _a.center_lat,
         center_lon = _a.center_lon,
         zoom_level = _a.zoom_level,
         max_zoom = _a.max_zoom,
-        tile_url = _a.tile_url;
+        tile_url = _a.tile_url,
+        geoJSON = _a.geoJSON;
     var carto = new ol_layer__WEBPACK_IMPORTED_MODULE_4__["Tile"]({
       source: new ol_source__WEBPACK_IMPORTED_MODULE_5__["XYZ"]({
         url: 'https://{1-4}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
       })
     });
-    var source = new ol_source__WEBPACK_IMPORTED_MODULE_5__["Vector"]();
+    var source = geoJSON ? new ol_source__WEBPACK_IMPORTED_MODULE_5__["Vector"]({
+      features: new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_7__["default"]().readFeatures(this.props.options.geoJSON)
+    }) : new ol_source__WEBPACK_IMPORTED_MODULE_5__["Vector"]();
     this.drawLayer = new ol_layer__WEBPACK_IMPORTED_MODULE_4__["Vector"]({
       source: source,
       style: function style(feature) {
-        var propKeyFromFeature = Object.keys(feature.getProperties()).find(function (el) {
-          return el !== 'geometry';
-        });
-        var textLabel = propKeyFromFeature ? propKeyFromFeature + " " + feature.get(propKeyFromFeature) : undefined;
-        var offsetY = feature.getGeometry().getType() === 'Point' ? -10 : 0;
+        var textLabel = feature.get('id') || feature.get('name');
+        var offsetY = feature.getGeometry().getType() === 'Point' ? -12 : 0;
         return new ol_style__WEBPACK_IMPORTED_MODULE_6__["Style"]({
           fill: new ol_style__WEBPACK_IMPORTED_MODULE_6__["Fill"]({
             color: 'rgba(255, 255, 255, 0.2)'
@@ -63858,48 +63888,6 @@ function (_super) {
       this.map.addLayer(this.randomTile);
     }
 
-    this.select = new ol_interaction__WEBPACK_IMPORTED_MODULE_3__["Select"]({
-      condition: ol_events_condition__WEBPACK_IMPORTED_MODULE_9__["click"]
-    });
-    this.select.setActive(false);
-    this.map.addInteraction(this.select);
-    this.select.on('select', function (e) {
-      var selectedFeature = e.target.getFeatures().item(0);
-
-      if (selectedFeature) {
-        var propKey_1 = selectedFeature.getKeys().find(function (el) {
-          return el !== 'geometry';
-        });
-
-        if (propKey_1) {
-          var propValue_1 = selectedFeature.get(propKey_1);
-
-          _this.setState(function (prevState) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prevState), {
-              selectedFeature: selectedFeature,
-              propKey: propKey_1,
-              propValue: propValue_1
-            });
-          });
-        } else {
-          _this.setState(function (prevState) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prevState), {
-              selectedFeature: selectedFeature,
-              propKey: '',
-              propValue: ''
-            });
-          });
-        }
-      } else {
-        _this.setState(function (prevState) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prevState), {
-            selectedFeature: null,
-            propKey: '',
-            propValue: ''
-          });
-        });
-      }
-    });
     this.modify = new ol_interaction__WEBPACK_IMPORTED_MODULE_3__["Modify"]({
       source: source
     });
@@ -63937,76 +63925,254 @@ function (_super) {
       });
     }
 
-    if (prevState.editMode !== this.state.editMode) {
-      if (!this.state.editMode) {
-        this.addInteractions();
-      }
-    }
-
     if (prevState.currentStep !== this.state.currentStep) {
       switch (this.state.currentStep) {
         case 1:
-          this.setState({
-            drawOption: 'Point'
-          }, function () {
-            return _this.addInteractions();
-          });
+          if (prevState.currentStep == 2) {
+            this.select.getFeatures().clear();
+            this.setState({
+              selectedFeature: null,
+              propValue: ''
+            }, function () {
+              _this.addInteractions();
+
+              _this.select.setActive(false);
+
+              _this.modify.setActive(true);
+            });
+          }
+
           break;
 
         case 2:
-          if (prevState.currentStep === 1) {
+          this.draw.setActive(false);
+          this.snap.setActive(false);
+          this.modify.setActive(false);
+
+          if (prevState.currentStep == 1) {
+            this.addSelectInteraction();
+          }
+
+          if (prevState.currentStep == 3) {
+            this.select.getFeatures().clear();
             this.setState({
-              drawOption: 'Polygon'
+              drawOption: 'Point'
             }, function () {
-              return _this.addInteractions();
+              _this.addSelectInteraction();
             });
-          } else {
-            this.draw.setActive(true);
-            this.snap.setActive(true);
-            this.modify.setActive(true);
-            this.select.setActive(false);
           }
 
           break;
 
         case 3:
-          if (prevState.currentStep === 2) {
+          this.select.setActive(false);
+          this.modify.setActive(true);
+          this.setState({
+            drawOption: 'Polygon',
+            selectedFeature: null,
+            propValue: ''
+          }, function () {
+            if (prevState.currentStep == 2) {
+              _this.addInteractions();
+            }
+
+            if (prevState.currentStep == 4) {
+              _this.select.getFeatures().clear();
+
+              _this.draw.setActive(true);
+
+              _this.snap.setActive(true);
+            }
+          });
+          break;
+
+        case 4:
+          if (prevState.currentStep === 3) {
+            this.addSelectInteraction();
             this.draw.setActive(false);
             this.snap.setActive(false);
             this.modify.setActive(false);
+          }
+
+          if (prevState.currentStep == 5) {
             this.select.setActive(true);
           }
 
           break;
 
-        case 4:
-          var features = this.drawLayer.getSource().getFeatures();
+        case 5:
+          this.setState({
+            selectedFeature: null,
+            propValue: ''
+          });
+          this.select.getFeatures().clear();
+          this.select.setActive(false);
+          break;
+
+        case 6:
+          this.setState({
+            selectedFeature: null,
+            propValue: ''
+          });
           var format = new ol_format_GeoJSON__WEBPACK_IMPORTED_MODULE_7__["default"]({
             featureProjection: 'EPSG:4326'
           });
-
-          if (features.length > 0) {
-            var geoJSON = JSON.parse(format.writeFeatures(features));
-            axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://158.177.187.158:5000/upload-json', {
-              data: geoJSON
-            }).then(function (res) {
-              return console.log(res);
-            })["catch"](function (err) {
-              return console.log(err);
+          var pointFeatures = this.drawLayer.getSource().getFeatures().filter(function (feature) {
+            return feature.getGeometry().getType() == 'Point';
+          });
+          var polygonFeatures = this.drawLayer.getSource().getFeatures().filter(function (feature) {
+            return feature.getGeometry().getType() == 'Polygon';
+          });
+          axios__WEBPACK_IMPORTED_MODULE_11___default.a.all([axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://158.177.187.158:5000/upload-json', {
+            points: format.writeFeaturesObject(pointFeatures)
+          }), axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://158.177.187.158:5000/upload-json', {
+            polygons: format.writeFeaturesObject(polygonFeatures)
+          })]).then(function () {
+            _this.setState({
+              errorType: 'success',
+              errorMessage: 'Saving to server successful!'
             });
-          }
 
+            setTimeout(function () {
+              _this.setState({
+                errorType: '',
+                errorMessage: ''
+              });
+            }, 3000);
+          })["catch"](function (err) {
+            var currentStep = _this.state.currentStep;
+
+            _this.setState({
+              errorType: 'error',
+              errorMessage: err.message,
+              currentStep: currentStep - 1
+            });
+
+            setTimeout(function () {
+              _this.setState({
+                errorType: '',
+                errorMessage: ''
+              });
+            }, 3000);
+          });
+          this.props.onOptionsChange(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.props.options), {
+            geoJSON: format.writeFeaturesObject(this.drawLayer.getSource().getFeatures())
+          }));
           break;
       }
     }
   };
 
-  MainPanel.prototype.handleClick = function (clickType) {
+  MainPanel.prototype.handleButtonClick = function (clickType) {
+    var e_1, _a, e_2, _b;
+
+    var _this = this;
+
     var currentStep = this.state.currentStep;
     var newStep = currentStep;
     clickType === 'next' ? newStep++ : newStep--;
 
-    if (newStep > 0 && newStep <= 5) {
+    if (newStep < 0 || newStep > stepsArray.length + 1) {
+      return;
+    }
+
+    if (currentStep == 2 && clickType == 'next') {
+      if (this.drawLayer.getSource().getFeatures().length == 0) {
+        return;
+      }
+
+      var completedPoints = true,
+          pointExist = false;
+
+      try {
+        for (var _c = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__values"])(this.drawLayer.getSource().getFeatures()), _d = _c.next(); !_d.done; _d = _c.next()) {
+          var feature = _d.value;
+
+          if (feature.getGeometry().getType() == 'Point' && !feature.get('id')) {
+            completedPoints = false;
+            break;
+          }
+
+          if (feature.getGeometry().getType() == 'Point') {
+            pointExist = true;
+          }
+        }
+      } catch (e_1_1) {
+        e_1 = {
+          error: e_1_1
+        };
+      } finally {
+        try {
+          if (_d && !_d.done && (_a = _c["return"])) _a.call(_c);
+        } finally {
+          if (e_1) throw e_1.error;
+        }
+      }
+
+      if (!completedPoints || !pointExist) {
+        this.setState({
+          errorType: 'warn',
+          errorMessage: 'Please set ID for all points!'
+        });
+        setTimeout(function () {
+          _this.setState({
+            errorType: '',
+            errorMessage: ''
+          });
+        }, 3000);
+        return;
+      }
+    }
+
+    if (currentStep == 4 && clickType == 'next') {
+      if (this.drawLayer.getSource().getFeatures().length == 0) {
+        return;
+      }
+
+      var completedPolygons = true,
+          polygonExist = false;
+
+      try {
+        for (var _e = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__values"])(this.drawLayer.getSource().getFeatures()), _f = _e.next(); !_f.done; _f = _e.next()) {
+          var feature = _f.value;
+
+          if (feature.getGeometry().getType() == 'Polygon' && !feature.get('name')) {
+            completedPolygons = false;
+            break;
+          }
+
+          if (feature.getGeometry().getType() == 'Polygon') {
+            polygonExist = true;
+          }
+        }
+      } catch (e_2_1) {
+        e_2 = {
+          error: e_2_1
+        };
+      } finally {
+        try {
+          if (_f && !_f.done && (_b = _e["return"])) _b.call(_e);
+        } finally {
+          if (e_2) throw e_2.error;
+        }
+      }
+
+      if (!completedPolygons || !polygonExist) {
+        this.setState({
+          errorType: 'warn',
+          errorMessage: 'Please set name for all polygons!'
+        });
+        setTimeout(function () {
+          _this.setState({
+            errorType: '',
+            errorMessage: ''
+          });
+        }, 3000);
+        return;
+      }
+    }
+
+    if (newStep > 0 && newStep <= stepsArray.length + 1) {
       this.setState({
         currentStep: newStep
       });
@@ -64020,10 +64186,12 @@ function (_super) {
         width = _a.width,
         height = _a.height;
     var _b = this.state,
-        propKey = _b.propKey,
         propValue = _b.propValue,
         selectedFeature = _b.selectedFeature,
-        currentStep = _b.currentStep;
+        currentStep = _b.currentStep,
+        drawOption = _b.drawOption,
+        errorType = _b.errorType,
+        errorMessage = _b.errorMessage;
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       style: {
         width: width,
@@ -64043,26 +64211,25 @@ function (_super) {
       onClick: this.handleUndo
     }, "Undo"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       onClick: this.handleDelete
-    }, "Delete")), selectedFeature && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    }, "Delete")), errorType == 'warn' && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "bar " + errorType
+    }, "\u26A0 ", errorMessage), errorType == 'error' && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "bar " + errorType
+    }, "\u2613", errorMessage), errorType == 'success' && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "bar " + errorType
+    }, "\u2714 ", errorMessage), selectedFeature && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "input-fields"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
+      onSubmit: this.setFeatureProp
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
       type: "text",
       className: "form__input",
       id: "propKey",
-      placeholder: "Key",
-      name: "propKey",
-      value: propKey,
-      onChange: this.handleLabelInput
-    }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-      type: "text",
-      className: "form__input",
-      id: "propValue",
-      placeholder: "Value",
+      placeholder: drawOption == 'Point' ? 'Enter ID of Point' : 'Enter Name of Place',
       name: "propValue",
       value: propValue,
-      onChange: this.handleLabelInput,
-      onKeyPress: this.onKeyPress
-    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_stepper_Stepper__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      onChange: this.handleLabelInput
+    }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_stepper_Stepper__WEBPACK_IMPORTED_MODULE_12__["default"], {
       direction: "vertical",
       currentStepNumber: currentStep - 1,
       steps: stepsArray,
@@ -64071,20 +64238,22 @@ function (_super) {
       className: "buttons-container"
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       onClick: function onClick() {
-        return _this.handleClick('');
-      }
+        return _this.handleButtonClick('');
+      },
+      disabled: currentStep == 1
     }, "Previous"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+      className: currentStep >= stepsArray.length ? 'send-button' : '',
       onClick: function onClick() {
-        return _this.handleClick('next');
-      }
-    }, "Next"))));
+        return _this.handleButtonClick('next');
+      },
+      disabled: currentStep > stepsArray.length
+    }, currentStep >= stepsArray.length ? 'Send' : 'Next'))));
   };
 
   return MainPanel;
 }(react__WEBPACK_IMPORTED_MODULE_1__["PureComponent"]);
 
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "../node_modules/process/browser.js")))
 
 /***/ }),
 

@@ -24,12 +24,13 @@ interface State {
   drawOption: string;
   editMode: boolean;
   selectedFeature: Feature | null;
-  propKey: string;
   propValue: string;
   currentStep: number;
+  errorType: string;
+  errorMessage: string;
 }
 
-const stepsArray = ['Place Access Point', 'Place Area of Interest', 'Select Feature to enter Property', 'Send to Server'];
+const stepsArray = ['Place Access Point', 'Select Point to Enter ID', 'Place Area of Interest', 'Select polygon to Enter Name', 'Send to Server'];
 
 export class MainPanel extends PureComponent<Props, State> {
   id: string;
@@ -37,7 +38,6 @@ export class MainPanel extends PureComponent<Props, State> {
   randomTile: TileLayer;
   dropdown: React.RefObject<HTMLSelectElement>;
   drawLayer: VectorLayer;
-  geoLayer: VectorLayer;
   draw: Draw;
   modify: Modify;
   snap: Snap;
@@ -50,16 +50,16 @@ export class MainPanel extends PureComponent<Props, State> {
       drawOption: 'Point',
       editMode: false,
       selectedFeature: null,
-      propKey: '',
       propValue: '',
       currentStep: 1,
+      errorType: '',
+      errorMessage: '',
     };
   }
 
   componentDidMount() {
-    console.log('host', window.location.hostname);
-    console.log('process host', process.env.host);
-    const { center_lat, center_lon, zoom_level, max_zoom, tile_url } = this.props.options;
+    // console.log('host', `${window.location.protocol}//${window.location.hostname}:5000/upload-json`);
+    const { center_lat, center_lon, zoom_level, max_zoom, tile_url, geoJSON } = this.props.options;
 
     const carto = new TileLayer({
       source: new XYZ({
@@ -67,13 +67,16 @@ export class MainPanel extends PureComponent<Props, State> {
       }),
     });
 
-    const source = new VectorSource();
+    const source = geoJSON
+      ? new VectorSource({
+          features: new GeoJSON().readFeatures(this.props.options.geoJSON as object),
+        })
+      : new VectorSource();
     this.drawLayer = new VectorLayer({
       source: source,
       style: function(feature: FeatureLike) {
-        const propKeyFromFeature = Object.keys(feature.getProperties()).find((el: string) => el !== 'geometry');
-        const textLabel = propKeyFromFeature ? `${propKeyFromFeature} ${feature.get(propKeyFromFeature)}` : undefined;
-        const offsetY = feature.getGeometry().getType() === 'Point' ? -10 : 0;
+        const textLabel = feature.get('id') || feature.get('name');
+        const offsetY = feature.getGeometry().getType() === 'Point' ? -12 : 0;
         return new Style({
           fill: new Fill({
             color: 'rgba(255, 255, 255, 0.2)',
@@ -132,31 +135,8 @@ export class MainPanel extends PureComponent<Props, State> {
       this.map.addLayer(this.randomTile);
     }
 
-    this.select = new Select({
-      condition: click,
-    });
-    this.select.setActive(false);
-    this.map.addInteraction(this.select);
-
-    this.select.on('select', (e: SelectEvent) => {
-      const selectedFeature = e.target.getFeatures().item(0);
-      if (selectedFeature) {
-        const propKey = selectedFeature.getKeys().find((el: string) => el !== 'geometry');
-        if (propKey) {
-          const propValue = selectedFeature.get(propKey);
-
-          this.setState(prevState => ({ ...prevState, selectedFeature, propKey, propValue }));
-        } else {
-          this.setState(prevState => ({ ...prevState, selectedFeature, propKey: '', propValue: '' }));
-        }
-      } else {
-        this.setState(prevState => ({ ...prevState, selectedFeature: null, propKey: '', propValue: '' }));
-      }
-    });
-
     this.modify = new Modify({ source: source });
     this.map.addInteraction(this.modify);
-
     this.addInteractions();
   }
 
@@ -188,45 +168,96 @@ export class MainPanel extends PureComponent<Props, State> {
       });
     }
 
-    if (prevState.editMode !== this.state.editMode) {
-      if (!this.state.editMode) {
-        this.addInteractions();
-      }
-    }
-
     if (prevState.currentStep !== this.state.currentStep) {
       switch (this.state.currentStep) {
         case 1:
-          this.setState({ drawOption: 'Point' }, () => this.addInteractions());
+          if (prevState.currentStep == 2) {
+            this.select.getFeatures().clear();
+            this.setState({ selectedFeature: null, propValue: '' }, () => {
+              this.addInteractions();
+              this.select.setActive(false);
+              this.modify.setActive(true);
+            });
+          }
           break;
         case 2:
-          if (prevState.currentStep === 1) {
-            this.setState({ drawOption: 'Polygon' }, () => this.addInteractions());
-          } else {
-            this.draw.setActive(true);
-            this.snap.setActive(true);
-            this.modify.setActive(true);
-            this.select.setActive(false);
+          this.draw.setActive(false);
+          this.snap.setActive(false);
+          this.modify.setActive(false);
+          if (prevState.currentStep == 1) {
+            this.addSelectInteraction();
+          }
+          if (prevState.currentStep == 3) {
+            this.select.getFeatures().clear();
+            this.setState({ drawOption: 'Point' }, () => {
+              this.addSelectInteraction();
+            });
           }
           break;
         case 3:
-          if (prevState.currentStep === 2) {
+          this.select.setActive(false);
+          this.modify.setActive(true);
+          this.setState({ drawOption: 'Polygon', selectedFeature: null, propValue: '' }, () => {
+            if (prevState.currentStep == 2) {
+              this.addInteractions();
+            }
+            if (prevState.currentStep == 4) {
+              this.select.getFeatures().clear();
+              this.draw.setActive(true);
+              this.snap.setActive(true);
+            }
+          });
+          break;
+        case 4:
+          if (prevState.currentStep === 3) {
+            this.addSelectInteraction();
             this.draw.setActive(false);
             this.snap.setActive(false);
             this.modify.setActive(false);
+          }
+          if (prevState.currentStep == 5) {
             this.select.setActive(true);
           }
           break;
-        case 4:
-          const features = this.drawLayer.getSource().getFeatures();
+        case 5:
+          this.setState({ selectedFeature: null, propValue: '' });
+          this.select.getFeatures().clear();
+          this.select.setActive(false);
+          break;
+        case 6:
+          this.setState({ selectedFeature: null, propValue: '' });
+
           const format = new GeoJSON({ featureProjection: 'EPSG:4326' });
-          if (features.length > 0) {
-            const geoJSON = JSON.parse(format.writeFeatures(features));
-            axios
-              .post('http://158.177.187.158:5000/upload-json', { data: geoJSON })
-              .then(res => console.log(res))
-              .catch(err => console.log(err));
-          }
+
+          const pointFeatures = this.drawLayer
+            .getSource()
+            .getFeatures()
+            .filter(feature => feature.getGeometry().getType() == 'Point');
+          const polygonFeatures = this.drawLayer
+            .getSource()
+            .getFeatures()
+            .filter(feature => feature.getGeometry().getType() == 'Polygon');
+
+          axios
+            .all([
+              axios.post('http://158.177.187.158:5000/upload-json', { points: format.writeFeaturesObject(pointFeatures) }),
+              axios.post('http://158.177.187.158:5000/upload-json', { polygons: format.writeFeaturesObject(polygonFeatures) }),
+            ])
+            .then(() => {
+              this.setState({ errorType: 'success', errorMessage: 'Saving to server successful!' });
+              setTimeout(() => {
+                this.setState({ errorType: '', errorMessage: '' });
+              }, 3000);
+            })
+            .catch(err => {
+              const { currentStep } = this.state;
+              this.setState({ errorType: 'error', errorMessage: err.message, currentStep: currentStep - 1 });
+              setTimeout(() => {
+                this.setState({ errorType: '', errorMessage: '' });
+              }, 3000);
+            });
+
+          this.props.onOptionsChange({ ...this.props.options, geoJSON: format.writeFeaturesObject(this.drawLayer.getSource().getFeatures()) });
           break;
       }
     }
@@ -252,66 +283,56 @@ export class MainPanel extends PureComponent<Props, State> {
     this.setState(prevState => ({ ...prevState, [name]: value }));
   };
 
-  onKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.which === 13) {
-      const { selectedFeature, propKey, propValue } = this.state;
-      if (selectedFeature && propKey) {
-        const propKeyFromFeature = selectedFeature.getKeys().find((el: string) => el !== 'geometry');
-        if (propKeyFromFeature) {
-          selectedFeature.unset(propKeyFromFeature);
-          selectedFeature.set(propKey, propValue);
-        } else {
-          selectedFeature.set(propKey, propValue);
-        }
+  setFeatureProp = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { selectedFeature, propValue, drawOption } = this.state;
+    if (selectedFeature && propValue) {
+      if (drawOption == 'Point') {
+        selectedFeature.get('id') && selectedFeature.unset('id');
+        selectedFeature.set('id', propValue);
+      }
+      if (drawOption == 'Polygon') {
+        selectedFeature.get('name') && selectedFeature.unset('name');
+        selectedFeature.set('name', propValue);
+      }
 
-        selectedFeature.setStyle(
-          new Style({
+      selectedFeature.setStyle(
+        new Style({
+          fill: new Fill({
+            color: 'rgba(255, 255, 255, 0.2)',
+          }),
+          stroke: new Stroke({
+            color: '#ffcc33',
+            width: 2,
+          }),
+          image: new CircleStyle({
+            radius: 7,
             fill: new Fill({
-              color: 'rgba(255, 255, 255, 0.2)',
-            }),
-            stroke: new Stroke({
               color: '#ffcc33',
+            }),
+          }),
+          text: new Text({
+            stroke: new Stroke({
+              color: '#fff',
               width: 2,
             }),
-            image: new CircleStyle({
-              radius: 7,
-              fill: new Fill({
-                color: '#ffcc33',
-              }),
-            }),
-            text: new Text({
-              stroke: new Stroke({
-                color: '#fff',
-                width: 2,
-              }),
-              font: '14px Calibri,sans-serif',
-              text: `${propKey} ${propValue}`,
-              offsetY: -10,
-            }),
-          })
-        );
-      }
-    }
-  };
-
-  handleSave = () => {
-    const features = this.drawLayer.getSource().getFeatures();
-    const format = new GeoJSON({ featureProjection: 'EPSG:4326' });
-    if (features.length > 0) {
-      const geoJSON = JSON.parse(format.writeFeatures(features));
-      axios
-        .post('http://158.177.187.158:5000/upload-json', { data: geoJSON })
-        .then(res => console.log(res))
-        .catch(err => console.log(err));
+            font: '14px Calibri,sans-serif',
+            text: propValue,
+            offsetY: -12,
+          }),
+        })
+      );
     }
   };
 
   addInteractions = () => {
+    const { drawOption } = this.state;
+
     this.map.removeInteraction(this.draw);
     this.map.removeInteraction(this.snap);
+    this.map.removeInteraction(this.select);
 
     const sourceDrawLayer = this.drawLayer.getSource();
-    const { drawOption } = this.state;
 
     this.draw = new Draw({
       source: sourceDrawLayer,
@@ -323,12 +344,96 @@ export class MainPanel extends PureComponent<Props, State> {
     this.map.addInteraction(this.snap);
   };
 
-  handleClick(clickType: string) {
+  addSelectInteraction = () => {
+    const { drawOption } = this.state;
+    this.select = new Select({
+      condition: click,
+      filter: feature => {
+        return feature.getGeometry().getType() == drawOption;
+      },
+    });
+    this.map.addInteraction(this.select);
+    this.select.on('select', (e: SelectEvent) => {
+      const selectedFeature = e.target.getFeatures().item(0);
+      if (selectedFeature) {
+        const propKey = selectedFeature.getKeys().find((el: string) => el !== 'geometry');
+        if (propKey) {
+          const propValue = selectedFeature.get(propKey);
+
+          this.setState(prevState => ({ ...prevState, selectedFeature, propKey, propValue }));
+        } else {
+          this.setState(prevState => ({ ...prevState, selectedFeature, propKey: '', propValue: '' }));
+        }
+      } else {
+        this.setState(prevState => ({ ...prevState, selectedFeature: null, propKey: '', propValue: '' }));
+      }
+    });
+  };
+
+  handleButtonClick(clickType: string) {
     const { currentStep } = this.state;
     let newStep = currentStep;
     clickType === 'next' ? newStep++ : newStep--;
 
-    if (newStep > 0 && newStep <= 5) {
+    if (newStep < 0 || newStep > stepsArray.length + 1) {
+      return;
+    }
+
+    if (currentStep == 2 && clickType == 'next') {
+      if (this.drawLayer.getSource().getFeatures().length == 0) {
+        return;
+      }
+
+      let completedPoints = true,
+        pointExist = false;
+
+      for (const feature of this.drawLayer.getSource().getFeatures()) {
+        if (feature.getGeometry().getType() == 'Point' && !feature.get('id')) {
+          completedPoints = false;
+          break;
+        }
+        if (feature.getGeometry().getType() == 'Point') {
+          pointExist = true;
+        }
+      }
+
+      if (!completedPoints || !pointExist) {
+        this.setState({ errorType: 'warn', errorMessage: 'Please set ID for all points!' });
+        setTimeout(() => {
+          this.setState({ errorType: '', errorMessage: '' });
+        }, 3000);
+        return;
+      }
+    }
+
+    if (currentStep == 4 && clickType == 'next') {
+      if (this.drawLayer.getSource().getFeatures().length == 0) {
+        return;
+      }
+
+      let completedPolygons = true,
+        polygonExist = false;
+
+      for (const feature of this.drawLayer.getSource().getFeatures()) {
+        if (feature.getGeometry().getType() == 'Polygon' && !feature.get('name')) {
+          completedPolygons = false;
+          break;
+        }
+        if (feature.getGeometry().getType() == 'Polygon') {
+          polygonExist = true;
+        }
+      }
+
+      if (!completedPolygons || !polygonExist) {
+        this.setState({ errorType: 'warn', errorMessage: 'Please set name for all polygons!' });
+        setTimeout(() => {
+          this.setState({ errorType: '', errorMessage: '' });
+        }, 3000);
+        return;
+      }
+    }
+
+    if (newStep > 0 && newStep <= stepsArray.length + 1) {
       this.setState({
         currentStep: newStep,
       });
@@ -337,7 +442,7 @@ export class MainPanel extends PureComponent<Props, State> {
 
   render() {
     const { width, height } = this.props;
-    const { propKey, propValue, selectedFeature, currentStep } = this.state;
+    const { propValue, selectedFeature, currentStep, drawOption, errorType, errorMessage } = this.state;
 
     return (
       <div
@@ -355,33 +460,40 @@ export class MainPanel extends PureComponent<Props, State> {
             <button onClick={this.handleUndo}>Undo</button>
             <button onClick={this.handleDelete}>Delete</button>
           </div>
+
+          {errorType == 'warn' && <div className={`bar ${errorType}`}>&#9888; {errorMessage}</div>}
+          {errorType == 'error' && <div className={`bar ${errorType}`}>&#9747;{errorMessage}</div>}
+          {errorType == 'success' && <div className={`bar ${errorType}`}>&#10004; {errorMessage}</div>}
+
           {selectedFeature && (
             <div className="input-fields">
-              <input
-                type="text"
-                className="form__input"
-                id="propKey"
-                placeholder="Key"
-                name="propKey"
-                value={propKey}
-                onChange={this.handleLabelInput}
-              />
-              <input
-                type="text"
-                className="form__input"
-                id="propValue"
-                placeholder="Value"
-                name="propValue"
-                value={propValue}
-                onChange={this.handleLabelInput}
-                onKeyPress={this.onKeyPress}
-              />
+              <form onSubmit={this.setFeatureProp}>
+                <input
+                  type="text"
+                  className="form__input"
+                  id="propKey"
+                  placeholder={drawOption == 'Point' ? 'Enter ID of Point' : 'Enter Name of Place'}
+                  name="propValue"
+                  value={propValue}
+                  onChange={this.handleLabelInput}
+                />
+              </form>
             </div>
           )}
+
           <Stepper direction="vertical" currentStepNumber={currentStep - 1} steps={stepsArray} stepColor="#ee5253" />
+
           <div className="buttons-container">
-            <button onClick={() => this.handleClick('')}>Previous</button>
-            <button onClick={() => this.handleClick('next')}>Next</button>
+            <button onClick={() => this.handleButtonClick('')} disabled={currentStep == 1}>
+              Previous
+            </button>
+            <button
+              className={currentStep >= stepsArray.length ? 'send-button' : ''}
+              onClick={() => this.handleButtonClick('next')}
+              disabled={currentStep > stepsArray.length}
+            >
+              {currentStep >= stepsArray.length ? 'Send' : 'Next'}
+            </button>
           </div>
         </div>
       </div>
