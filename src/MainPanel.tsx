@@ -240,8 +240,12 @@ export class MainPanel extends PureComponent<Props, State> {
 
           axios
             .all([
-              axios.post('http://158.177.187.158:5000/upload-json', { points: format.writeFeaturesObject(pointFeatures) }),
-              axios.post('http://158.177.187.158:5000/upload-json', { polygons: format.writeFeaturesObject(polygonFeatures) }),
+              axios.post(`${window.location.protocol}//${window.location.hostname}:5000/upload-json`, {
+                points: format.writeFeaturesObject(pointFeatures),
+              }),
+              axios.post(`${window.location.protocol}//${window.location.hostname}:5000/upload-json`, {
+                polygons: format.writeFeaturesObject(polygonFeatures),
+              }),
             ])
             .then(() => {
               this.setState({ errorType: 'success', errorMessage: 'Saving to server successful!' });

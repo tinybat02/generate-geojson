@@ -20,8 +20,6 @@
   "dependencies": {
     "axios": "^0.19.2",
     "nanoid": "^3.0.2",
-    "ol": "^6.3.1",
-    "react-inlinesvg": "^1.2.0",
-    "react-toastify": "^5.5.0"
+    "ol": "^6.3.1"
   }
 }

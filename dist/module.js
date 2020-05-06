@@ -64023,9 +64023,9 @@ function (_super) {
           var polygonFeatures = this.drawLayer.getSource().getFeatures().filter(function (feature) {
             return feature.getGeometry().getType() == 'Polygon';
           });
-          axios__WEBPACK_IMPORTED_MODULE_11___default.a.all([axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://158.177.187.158:5000/upload-json', {
+          axios__WEBPACK_IMPORTED_MODULE_11___default.a.all([axios__WEBPACK_IMPORTED_MODULE_11___default.a.post(window.location.protocol + "//" + window.location.hostname + ":5000/upload-json", {
             points: format.writeFeaturesObject(pointFeatures)
-          }), axios__WEBPACK_IMPORTED_MODULE_11___default.a.post('http://158.177.187.158:5000/upload-json', {
+          }), axios__WEBPACK_IMPORTED_MODULE_11___default.a.post(window.location.protocol + "//" + window.location.hostname + ":5000/upload-json", {
             polygons: format.writeFeaturesObject(polygonFeatures)
           })]).then(function () {
             _this.setState({
